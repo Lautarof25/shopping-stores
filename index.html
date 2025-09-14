@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería Central - Distribución Corregida</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 text-gray-900 flex">
+
+  <!-- Sidebar fijo (desktop) -->
+  <aside class="hidden md:flex fixed top-0 left-0 h-full w-64 bg-neutral-900 text-white flex-col shadow-lg z-40">
+    <div class="p-6 border-b border-gray-800">
+      <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto mb-2 h-12 w-auto">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3333 0C23.7194 0 24.1033 0.00932962 24.4847 0.0280265C24.4924 0.0284028 24.4989 0.0222809 24.4989 0.0145938V0.0145938C24.4989 0.00716838 24.5049 0.0011489 24.5123 0.0011489H45.8418C46.2974 0.00137965 46.6667 0.373466 46.6667 0.83295C46.6666 1.05356 46.5798 1.26515 46.4251 1.42119L40.8322 7.05882H52.7444C53.5415 7.05882 54.27 7.52957 54.5456 8.27757C55.4857 10.829 56 13.5892 56 16.4706C56 29.4655 45.5533 40 32.6667 40C32.2808 40 31.8971 39.9896 31.5158 39.9709C31.5078 39.9705 31.5011 39.9768 31.5011 39.9848V39.9848C31.5011 39.9926 31.4949 39.9989 31.4871 39.9989H10.1582C9.7026 39.9986 9.33333 39.6265 9.33333 39.1671C9.33336 38.9464 9.42022 38.7348 9.57487 38.5788L15.1655 32.9412H3.25562C2.45846 32.9412 1.73002 32.4704 1.4544 31.7224C0.514256 29.171 0 26.4109 0 23.5294C0 10.5345 10.4467 0 23.3333 0ZM31.3177 16.6556C29.3919 14.383 26.5301 12.9412 23.3333 12.9412C17.5343 12.9412 12.8333 17.6817 12.8333 23.5294C12.8333 24.7672 13.0456 25.9547 13.4326 27.0588H20.9989L24.6823 23.3444C26.6081 25.617 29.4699 27.0588 32.6667 27.0588C38.4657 27.0588 43.1667 22.3183 43.1667 16.4706C43.1667 15.2328 42.9544 14.0453 42.5674 12.9412H35.0011L31.3177 16.6556Z" fill="#3754FA"></path>
+      </svg>
+      <h1 class="text-xl font-bold text-center">Galería Central</h1>
+    </div>
+    <nav class="flex-1 p-4 overflow-y-auto">
+      <div class="search-container">
+        <input id="search" type="text" placeholder="Buscar locales..." 
+               class="w-full p-2 pl-3 pr-8 rounded bg-neutral-800 text-gray-200 placeholder-gray-400 focus:outline-none responsive-text">
+        <button class="clear-search" id="clearSearch">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <ul class="space-y-2">
+        <li>
+          <label class="radio-container">
+            Todos
+            <input type="radio" name="category" value="todos" checked>
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label class="radio-container">
+            Moda
+            <input type="radio" name="category" value="moda">
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label class="radio-container">
+            Gastronomía
+            <input type="radio" name="category" value="gastronomía">
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label class="radio-container">
+            Tecnología
+            <input type="radio" name="category" value="tecnología">
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        
+        <div class="contact-separator">
+          <li><a href="#contacto" class="block p-2 rounded hover:bg-neutral-800 contact-link responsive-text">Contacto</a></li>
+        </div>
+      </ul>
+    </nav>
+    
+    <!-- Footer del sidebar -->
+    <div class="sidebar-footer">
+      <h3 class="font-bold mb-2 responsive-text">Visítanos</h3>
+      <p class="text-gray-300 mb-2 responsive-text">
+        <i class="fas fa-map-marker-alt mr-2"></i>Av. Principal 1234
+      </p>
+      <p class="text-gray-300 mb-2 responsive-text">
+        <i class="fas fa-phone mr-2"></i>(123) 456-7890
+      </p>
+      <p class="text-gray-300 responsive-text">
+        <i class="fas fa-envelope mr-2"></i>info@galeriacentral.com
+      </p>
+    </div>
+  </aside>
+
+  <!-- Menú móvil -->
+  <aside id="mobileMenu" class="mobile-menu md:hidden fixed top-0 left-0 h-full w-64 bg-neutral-900 text-white flex-col shadow-lg z-40">
+    <div class="p-6 border-b border-gray-800 flex justify-between items-center">
+      <div>
+        <svg width="56" height="40" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="mx-auto mb-2 h-10 w-auto">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3333 0C23.7194 0 24.1033 0.00932962 24.4847 0.0280265C24.4924 0.0284028 24.4989 0.0222809 24.4989 0.0145938V0.0145938C24.4989 0.00716838 24.5049 0.0011489 24.5123 0.0011489H45.8418C46.2974 0.00137965 46.6667 0.373466 46.6667 0.83295C46.6666 1.05356 46.5798 1.26515 46.4251 1.42119L40.8322 7.05882H52.7444C53.5415 7.05882 54.27 7.52957 54.5456 8.27757C55.4857 10.829 56 13.5892 56 16.4706C56 29.4655 45.5533 40 32.6667 40C32.2808 40 31.8971 39.9896 31.5158 39.9709C31.5078 39.9705 31.5011 39.9768 31.5011 39.9848V39.9848C31.5011 39.9926 31.4949 39.9989 31.4871 39.9989H10.1582C9.7026 39.9986 9.33333 39.6265 9.33333 39.1671C9.33336 38.9464 9.42022 38.7348 9.57487 38.5788L15.1655 32.9412H3.25562C2.45846 32.9412 1.73002 32.4704 1.4544 31.7224C0.514256 29.171 0 26.4109 0 23.5294C0 10.5345 10.4467 0 23.3333 0ZM31.3177 16.6556C29.3919 14.383 26.5301 12.9412 23.3333 12.9412C17.5343 12.9412 12.8333 17.6817 12.8333 23.5294C12.8333 24.7672 13.0456 25.9547 13.4326 27.0588H20.9989L24.6823 23.3444C26.6081 25.617 29.4699 27.0588 32.6667 27.0588C38.4657 27.0588 43.1667 22.3183 43.1667 16.4706C43.1667 15.2328 42.9544 14.0453 42.5674 12.9412H35.0011L31.3177 16.6556Z" fill="#3754FA"></path>
+        </svg>
+        <h1 class="text-xl font-bold text-center">Galería Central</h1>
+      </div>
+      <button id="closeMenu" class="text-white text-2xl">×</button>
+    </div>
+    <nav class="flex-1 p-4 overflow-y-auto">
+      <div class="search-container">
+        <input id="search-mobile" type="text" placeholder="Buscar locales..." 
+               class="w-full p-2 pl-3 pr-8 rounded bg-neutral-800 text-gray-200 placeholder-gray-400 focus:outline-none responsive-text">
+        <button class="clear-search" id="clearSearchMobile">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <ul class="space-y-2">
+        <li>
+          <label class="radio-container">
+            Todos
+            <input type="radio" name="category-mobile" value="todos" checked>
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label class="radio-container">
+            Moda
+            <input type="radio" name="category-mobile" value="moda">
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label class="radio-container">
+            Gastronomía
+            <input type="radio" name="category-mobile" value="gastronomía">
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        <li>
+          <label class="radio-container">
+            Tecnología
+            <input type="radio" name="category-mobile" value="tecnología">
+            <span class="checkmark"></span>
+          </label>
+        </li>
+        
+        <div class="contact-separator">
+          <li><a href="#contacto" class="block p-2 rounded hover:bg-neutral-800 contact-link responsive-text">Contacto</a></li>
+        </div>
+      </ul>
+    </nav>
+    
+    <!-- Footer del menú móvil -->
+    <div class="sidebar-footer">
+      <h3 class="font-bold mb-2 responsive-text">Visítanos</h3>
+      <p class="text-gray-300 mb-2 responsive-text">
+        <i class="fas fa-map-marker-alt mr-2"></i>Av. Principal 1234
+      </p>
+      <p class="text-gray-300 mb-2 responsive-text">
+        <i class="fas fa-phone mr-2"></i>(123) 456-7890
+      </p>
+      <p class="text-gray-300 responsive-text">
+        <i class="fas fa-envelope mr-2"></i>info@galeriacentral.com
+      </p>
+    </div>
+  </aside>
+
+  <!-- Overlay para menú móvil -->
+  <div id="menuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden"></div>
+
+  <!-- Botón hamburguesa (solo en mobile) -->
+  <button id="menuButton" class="md:hidden fixed top-4 left-4 z-50 bg-neutral-900 text-white p-2 rounded">
+    ☰
+  </button>
+
+  <!-- Main -->
+  <main class="md:ml-64 flex-1 snap-container">
+
+    <!-- HERO -->
+    <section id="hero" class="snap-section relative flex items-center justify-center bg-cover bg-center"
+             style="background-image: url('https://picsum.photos/1600/900?random=500');">
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative text-center text-white px-6 max-w-2xl">
+        <h1 class="responsive-title font-extrabold mb-6">Bienvenido a Galería Central</h1>
+        <p class="responsive-subtitle mb-8">
+          Moda, gastronomía y tecnología en un solo lugar. Descubrí experiencias únicas.
+        </p>
+        <a href="#tiendas" 
+           class="responsive-button px-6 py-3 bg-pink-500 hover:bg-pink-600 rounded-lg font-semibold transition">
+          Explorar tiendas
+        </a>
+      </div>
+    </section>
+
+    <!-- Mensaje cuando no hay resultados -->
+    <div id="noResults" class="snap-section no-results">
+      <div>
+        <i class="fas fa-search"></i>
+        <h3 class="responsive-title font-bold text-gray-700 mb-2">No se encontraron resultados</h3>
+        <p class="responsive-text text-gray-500">Intenta con otros términos de búsqueda o selecciona una categoría diferente.</p>
+      </div>
+    </div>
+
+    <!-- CARD EJEMPLO 1 -->
+    <article id="tiendas" class="snap-section flex items-center justify-center p-4 store-card" data-category="moda" data-description="ropa femenina moda accesorios colecciones exclusivas">
+      <div class="w-full h-full max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden 
+              flex flex-col md:grid md:grid-cols-12">
+
+        <!-- Imagen principal -->
+        <div class="h-64 md:h-full md:col-span-4">
+          <img src="https://picsum.photos/1000/800?random=201" alt="Imagen principal"
+               class="w-full h-full object-cover">
+        </div>
+
+        <!-- Columna central -->
+        <div class="flex-1 md:col-span-5 mobile-card-content">
+          <div class="card-content-container">
+            <!-- Sección superior -->
+            <div class="card-top-section">
+              <span class="local-number">Local 22</span>
+              <h3 class="responsive-card-title font-bold text-pink-600 tight-spacing">Boutique Luna</h3>
+
+              <div class="responsive-card-text text-gray-600 tight-spacing-lg">
+                <p class="mb-1 tight-spacing"><strong>Categoría:</strong> Moda</p>
+                <p class="tight-spacing"><strong>Horario:</strong> 10:00 - 20:00</p>
+              </div>
+            </div>
+
+            <!-- Sección media -->
+            <div class="card-middle-section">
+              <p class="responsive-card-text text-gray-700 leading-relaxed tight-spacing-lg">
+                Ropa femenina de última tendencia, accesorios y colecciones exclusivas para esta temporada.
+                Espacio con probadores y atención personalizada.
+              </p>
+
+              <!-- Enlace al sitio web -->
+              <div class="text-center md:text-left tight-spacing-lg">
+                <a href="#" class="website-link responsive-text">
+                  <i class="fas fa-globe"></i>
+                  Visitar sitio web
+                </a>
+              </div>
+
+              <!-- Iconos de redes sociales -->
+              <div class="social-icons">
+                <a href="#" class="social-icon bg-green-500">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-icon bg-blue-600">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon bg-pink-600">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon bg-blue-400">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon bg-red-600">
+                  <i class="fab fa-youtube"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Sección inferior para desktop -->
+            <div class="card-bottom-section hidden md:block">
+              <a href="detalle-boutique-luna.html" class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text inline-block text-center">
+                Ver más
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección inferior fija para móviles -->
+        <div class="card-bottom-section md:hidden">
+          <a href="detalle-boutique-luna.html" class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text inline-block text-center">
+            Ver más
+          </a>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="md:col-span-3 p-4 md:p-2">
+          <div class="mobile-small-images md:grid md:grid-rows-3 md:gap-2 md:h-full">
+            <img src="https://picsum.photos/400/300?random=202" alt="sec1" class="w-full h-full object-cover">
+            <img src="https://picsum.photos/400/300?random=203" alt="sec2" class="w-full h-full object-cover">
+            <img src="https://picsum.photos/400/300?random=204" alt="sec3" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+      </div>
+    </article>
+    
+    <!-- CARD EJEMPLO 2 -->
+    <article class="snap-section flex items-center justify-center p-4 store-card" data-category="tecnología" data-description="dispositivos tecnológicos smartphones tablets accesorios asesoramiento servicio técnico">
+      <div class="w-full h-full max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden 
+              flex flex-col md:grid md:grid-cols-12">
+
+        <!-- Imagen principal -->
+        <div class="h-64 md:h-full md:col-span-4">
+          <img src="https://picsum.photos/1000/800?random=205" alt="Imagen principal"
+               class="w-full h-full object-cover">
+        </div>
+
+        <!-- Columna central -->
+        <div class="flex-1 md:col-span-5 mobile-card-content">
+          <div class="card-content-container">
+            <!-- Sección superior -->
+            <div class="card-top-section">
+              <span class="local-number">Local 15</span>
+              <h3 class="responsive-card-title font-bold text-pink-600 tight-spacing">Tech World</h3>
+
+              <div class="responsive-card-text text-gray-600 tight-spacing-lg">
+                <p class="mb-1 tight-spacing"><strong>Categoría:</strong> Tecnología</p>
+                <p class="tight-spacing"><strong>Horario:</strong> 9:00 - 21:00</p>
+              </div>
+            </div>
+
+            <!-- Sección media -->
+            <div class="card-middle-section">
+              <p class="responsive-card-text text-gray-700 leading-relaxed tight-spacing-lg">
+                Los últimos dispositivos tecnológicos, smartphones, tablets y accesorios. 
+                Asesoramiento especializado y servicio técnico certificado.
+              </p>
+
+              <!-- Enlace al sitio web -->
+              <div class="text-center md:text-left tight-spacing-lg">
+                <a href="#" class="website-link responsive-text">
+                  <i class="fas fa-globe"></i>
+                  Visitar sitio web
+                </a>
+              </div>
+
+              <!-- Iconos de redes sociales -->
+              <div class="social-icons">
+                <a href="#" class="social-icon bg-green-500">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-icon bg-blue-600">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon bg-pink-600">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon bg-blue-400">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Sección inferior para desktop -->
+            <div class="card-bottom-section hidden md:block">
+              <button class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text">
+                Ver más
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección inferior fija para móviles -->
+        <div class="card-bottom-section md:hidden">
+          <button class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text">
+            Ver más
+          </button>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="md:col-span-3 p-4 md:p-2">
+          <div class="mobile-small-images md:grid md:grid-rows-3 md:gap-2 md:h-full">
+            <img src="https://picsum.photos/400/300?random=206" alt="sec1" class="w-full h-full object-cover">
+            <img src="https://picsum.photos/400/300?random=207" alt="sec2" class="w-full h-full object-cover">
+            <img src="https://picsum.photos/400/300?random=208" alt="sec3" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- CARD EJEMPLO 3 -->
+    <article class="snap-section flex items-center justify-center p-4 store-card" data-category="gastronomía" data-description="comida internacional sabores auténticos ambiente acogedor servicio excepcional platos especiales postres caseros">
+      <div class="w-full h-full max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden 
+              flex flex-col md:grid md:grid-cols-12">
+
+        <!-- Imagen principal -->
+        <div class="h-64 md:h-full md:col-span-4">
+          <img src="https://picsum.photos/1000/800?random=209" alt="Imagen principal"
+               class="w-full h-full object-cover">
+        </div>
+
+        <!-- Columna central -->
+        <div class="flex-1 md:col-span-5 mobile-card-content">
+          <div class="card-content-container">
+            <!-- Sección superior -->
+            <div class="card-top-section">
+              <span class="local-number">Local 08</span>
+              <h3 class="responsive-card-title font-bold text-pink-600 tight-spacing">Delicious Bites</h3>
+
+              <div class="responsive-card-text text-gray-600 tight-spacing-lg">
+                <p class="mb-1 tight-spacing"><strong>Categoría:</strong> Gastronomía</p>
+                <p class="tight-spacing"><strong>Horario:</strong> 9:00 - 19:00</p>
+              </div>
+            </div>
+
+            <!-- Sección media -->
+            <div class="card-middle-section">
+              <p class="responsive-card-text text-gray-700 leading-relaxed tight-spacing-lg">
+                Comida internacional con sabores auténticos. Ambiente acogedor y servicio excepcional. 
+                Disfruta de nuestros platos especiales y postres caseros.
+              </p>
+
+              <!-- Enlace al sitio web -->
+              <div class="text-center md:text-left tight-spacing-lg">
+                <a href="#" class="website-link responsive-text">
+                  <i class="fas fa-globe"></i>
+                  Visitar sitio web
+                </a>
+              </div>
+
+              <!-- Iconos de redes sociales -->
+              <div class="social-icons">
+                <a href="#" class="social-icon bg-green-500">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="social-icon bg-blue-600">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon bg-pink-600">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-icon bg-red-500">
+                  <i class="fab fa-tiktok"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Sección inferior para desktop -->
+            <div class="card-bottom-section hidden md:block">
+              <button class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text">
+                Ver más
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sección inferior fija para móviles -->
+        <div class="card-bottom-section md:hidden">
+          <button class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text">
+            Ver más
+          </button>
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="md:col-span-3 p-4 md:p-2">
+          <div class="mobile-small-images md:grid md:grid-rows-3 md:gap-2 md:h-full">
+            <img src="https://picsum.photos/400/300?random=210" alt="sec1" class="w-full h-full object-cover">
+            <img src="https://picsum.photos/400/300?random=211" alt="sec2" class="w-full h-full object-cover">
+            <img src="https://picsum.photos/400/300?random=212" alt="sec3" class="w-full h-full object-cover">
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- SECCIÓN DE CONTACTO Y MAPA -->
+    <section id="contacto" class="snap-section contact-section bg-gray-100 p-4">
+      <div class="contact-content bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+        <!-- Información de contacto -->
+        <div class="md:w-2/5 p-8 bg-pink-50 flex flex-col justify-center">
+          <h2 class="responsive-title font-bold mb-6 text-pink-600">Contacto</h2>
+          
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start">
+              <i class="fas fa-map-marker-alt text-pink-500 mt-1 mr-4 responsive-text"></i>
+              <div>
+                <h3 class="font-semibold responsive-text">Dirección</h3>
+                <p class="text-gray-700 responsive-text">Av. Principal 1234, Ciudad</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <i class="fas fa-phone text-pink-500 mt-1 mr-4 responsive-text"></i>
+              <div>
+                <h3 class="font-semibold responsive-text">Teléfono</h3>
+                <p class="text-gray-700 responsive-text">(123) 456-7890</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <i class="fas fa-envelope text-pink-500 mt-1 mr-4 responsive-text"></i>
+              <div>
+                <h3 class="font-semibold responsive-text">Email</h3>
+                <p class="text-gray-700 responsive-text">info@galeriacentral.com</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <i class="fas fa-clock text-pink-500 mt-1 mr-4 responsive-text"></i>
+              <div>
+                <h3 class="font-semibold responsive-text">Horarios</h3>
+                <p class="text-gray-700 responsive-text">Lunes a Sábado: 9:00 - 22:00</p>
+                <p class="text-gray-700 responsive-text">Domingos: 10:00 - 20:00</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="social-icons">
+            <a href="#" class="social-icon bg-blue-600">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="social-icon bg-pink-600">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon bg-blue-400">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="social-icon bg-green-500">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Mapa -->
+        <div class="md:w-3/5 h-64 md:h-auto">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.250343362866!2d-64.1882492244047!3d-31.41375509922885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28457e3d2a5%3A0xdeb7b7dbb93c5b4f!2sPatio%20Olmos!5e0!3m2!1ses!2sar!4v1685579008288!5m2!1ses!2sar" 
+            class="w-full h-full border-0" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
