@@ -1,191 +1,156 @@
-/* Estilos personalizados para mejorar la adaptabilidad */
-@media (max-width: 768px) {
-    .mobile-card {
-        height: 100vh;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .mobile-card-content {
-        flex: 1;
-        overflow-y: auto;
-    }
-
-    .mobile-menu {
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .mobile-menu.open {
-        transform: translateX(0);
-    }
-
-    .snap-mandatory {
-        scroll-snap-type: y mandatory;
-    }
-
-    .snap-start {
-        scroll-snap-align: start;
-        height: 100vh;
-    }
-
-    /* Ajuste para el contenedor principal con botones fijos */
-    .snap-container {
-        padding-bottom: 70px;
-        /* Espacio para los botones fijos */
-    }
-}
-
-/* Contenedor principal con scroll snap */
-.snap-container {
-    scroll-snap-type: y proximity;
-    /* NO mandatory */
-    overflow-y: scroll;
-    height: 100vh;
-}
-
-/* Cada sección se intenta alinear */
-.snap-section {
-    scroll-snap-align: start;
-    min-height: 100vh;
-    /* fuerza ocupar la pantalla al menos */
-    display: flex;
-    flex-direction: column;
-}
-
-/* Cuando la card tenga más contenido que el alto de pantalla */
-.store-card {
-    overflow-y: auto; /* permite scroll interno */
+/* ===== VARIABLES Y CONFIGURACIÓN GLOBAL ===== */
+:root {
+    /* Colores */
+    --color-primary: #EC4899;
+    --color-secondary: #8B5CF6;
+    --color-dark: #374151;
+    --color-gray: #9CA3AF;
+    --color-light: #f8f8f8;
+    --color-white: #ffffff;
+    
+    /* Tamaños */
+    --border-radius: 12px;
+    --border-radius-lg: 16px;
+    --border-radius-full: 50%;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s ease;
+    
+    /* Espaciados */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
   }
-
-/* Mejorar la visualización de imágenes en móviles */
-.img-container {
-    height: 100%;
-    width: 100%;
-}
-
-/* Ajustar grid para móviles */
-@media (max-width: 768px) {
-    .mobile-grid {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    .mobile-grid>div {
-        flex: 1;
-        min-height: 0;
-        /* Permite que los elementos se ajusten */
-    }
-
-    .mobile-small-images {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 0.5rem;
-        height: 120px;
-    }
-}
-
-/* Estilos para los iconos de redes sociales */
-.social-icons {
+  
+  /* ===== ESTILOS BASE ===== */
+  .responsive-title {
+    font-size: clamp(1.8rem, 5vw, 3rem);
+  }
+  
+  .responsive-subtitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  .responsive-text {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+  }
+  
+  .responsive-button {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1.5rem, 4vw, 2rem);
+  }
+  
+  .responsive-card-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  .responsive-card-text {
+    font-size: clamp(0.85rem, 2vw, 1.5rem);
+  }
+  
+  .tight-spacing {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .tight-spacing-lg {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  /* ===== COMPONENTES REUTILIZABLES ===== */
+  /* Botones y enlaces */
+  .website-link, .promo-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    color: var(--color-white);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+  }
+  
+  .website-link {
+    background: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+    margin-top: 16px;
+  }
+  
+  .website-link:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  }
+  
+  .promo-button {
+    background: var(--color-white);
+    color: var(--color-primary);
+    padding: 12px 24px;
+    font-weight: 600;
+  }
+  
+  .promo-button:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow-hover);
+    background: var(--color-light);
+  }
+  
+  /* Iconos sociales */
+  .social-icons {
     display: flex;
     justify-content: center;
     gap: 12px;
     margin-top: 20px;
     flex-wrap: wrap;
-}
-
-.social-icon {
+  }
+  
+  .social-icon {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: var(--border-radius-full);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--color-white);
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
     flex-shrink: 0;
-}
-
-.social-icon:hover {
+  }
+  
+  .social-icon:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.website-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 16px;
-    padding: 10px 16px;
-    background: linear-gradient(135deg, #8B5CF6, #EC4899);
-    color: white;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.website-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    background: linear-gradient(135deg, #EC4899, #8B5CF6);
-}
-
-/* Estilo para el número de local */
-.local-number {
+    box-shadow: var(--box-shadow-hover);
+  }
+  
+  /* Badges y etiquetas */
+  .local-number, .product-badge {
     display: inline-block;
-    background-color: #EC4899;
-    color: white;
-    padding: 4px 12px;
+    color: var(--color-white);
     border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .local-number {
+    background-color: var(--color-primary);
+    padding: 4px 12px;
     font-size: clamp(0.7rem, 2vw, 0.9rem);
     margin-bottom: 8px;
-}
-
-/* Ajustes para el mapa */
-.map-container {
-    height: 100%;
-    width: 100%;
-}
-
-/* Footer del menú lateral */
-.sidebar-footer {
-    border-top: 1px solid #374151;
-    padding: 1.5rem;
-    margin-top: auto;
-}
-
-/* Ocultar elementos con filtro */
-.hidden-card {
-    display: none !important;
-}
-
-/* Mensaje cuando no hay resultados */
-.no-results {
-    display: none;
-    text-align: center;
-    padding: 2rem;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.no-results i {
-    font-size: clamp(2.5rem, 8vw, 3rem);
-    color: #9CA3AF;
-    margin-bottom: 1rem;
-}
-
-/* Estilos para los radio buttons personalizados */
-.radio-container {
+  }
+  
+  .product-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 12px;
+    font-size: 0.75rem;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Radio buttons personalizados */
+  .radio-container {
     display: block;
     position: relative;
     padding-left: 32px;
@@ -193,447 +158,435 @@
     cursor: pointer;
     font-size: clamp(0.8rem, 2vw, 0.9rem);
     user-select: none;
-}
-
-.radio-container input {
+  }
+  
+  .radio-container input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
-}
-
-.checkmark {
+  }
+  
+  .checkmark {
     position: absolute;
     top: 0;
     left: 0;
     height: 20px;
     width: 20px;
-    background-color: #374151;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-
-.radio-container:hover input~.checkmark {
+    background-color: var(--color-dark);
+    border-radius: var(--border-radius-full);
+    transition: var(--transition);
+  }
+  
+  .radio-container:hover input ~ .checkmark {
     background-color: #4B5563;
-}
-
-.radio-container input:checked~.checkmark {
-    background-color: #EC4899;
-}
-
-.checkmark:after {
+  }
+  
+  .radio-container input:checked ~ .checkmark {
+    background-color: var(--color-primary);
+  }
+  
+  .checkmark:after {
     content: "";
     position: absolute;
     display: none;
-}
-
-.radio-container input:checked~.checkmark:after {
-    display: block;
-}
-
-.radio-container .checkmark:after {
     top: 6px;
     left: 6px;
     width: 8px;
     height: 8px;
-    border-radius: 50%;
-    background: white;
-}
-
-/* Estilo para el contenedor de búsqueda con botón de limpiar */
-.search-container {
+    border-radius: var(--border-radius-full);
+    background: var(--color-white);
+  }
+  
+  .radio-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Contenedor de búsqueda */
+  .search-container {
     position: relative;
-    margin-bottom: 1rem;
-}
-
-.clear-search {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .clear-search {
     position: absolute;
     right: 10px;
     top: 50%;
     transform: translateY(-50%);
     background: none;
     border: none;
-    color: #9CA3AF;
+    color: var(--color-gray);
     cursor: pointer;
     display: none;
-}
-
-.search-container input:not(:placeholder-shown)+.clear-search {
+  }
+  
+  .search-container input:not(:placeholder-shown) + .clear-search {
     display: block;
-}
-
-/* Separación para el enlace de contacto */
-.contact-separator {
-    border-top: 1px solid #374151;
-    margin: 1rem 0;
-    padding-top: 1rem;
-}
-
-/* Textos responsivos con clamp */
-.responsive-title {
-    font-size: clamp(1.8rem, 5vw, 3rem);
-}
-
-.responsive-subtitle {
-    font-size: clamp(1rem, 3vw, 1.5rem);
-}
-
-.responsive-text {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-}
-
-.responsive-button {
-    font-size: clamp(0.9rem, 2vw, 1.1rem);
-    padding: clamp(0.5rem, 2vw, 0.75rem) clamp(1.5rem, 4vw, 2rem);
-}
-
-.responsive-card-title {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-}
-
-.responsive-card-text {
-    font-size: clamp(0.85rem, 2vw, 1.5rem);
-}
-
-/* Ajustes para la sección de contacto */
-.contact-section {
+  }
+  
+  /* Separadores */
+  .contact-separator, .sidebar-footer {
+    border-top: 1px solid var(--color-dark);
+  }
+  
+  .contact-separator {
+    margin: var(--spacing-md) 0;
+    padding-top: var(--spacing-md);
+  }
+  
+  .sidebar-footer {
+    padding: var(--spacing-lg);
+    margin-top: auto;
+  }
+  
+  /* ===== COMPONENTES ESPECÍFICOS ===== */
+  /* Snap container y secciones */
+  .snap-container {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+  
+  .snap-section {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Tarjetas */
+  .store-card {
+    overflow-y: auto;
+  }
+  
+  .card-content-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: var(--spacing-lg);
+  }
+  
+  .card-top-section {
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .card-middle-section {
+    margin: var(--spacing-md) 0;
+  }
+  
+  .card-bottom-section {
+    margin-top: auto;
+  }
+  
+  /* Contenedores de imágenes */
+  .img-container, .map-container {
+    height: 100%;
+    width: 100%;
+  }
+  
+  /* Banner promocional */
+  .promo-banner {
+    background: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-primary) 100%);
+    color: var(--color-white);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .promo-banner-content {
+    padding: var(--spacing-xl);
+  }
+  
+  .promo-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: bold;
+    margin-bottom: var(--spacing-md);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  
+  .promo-text {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.5;
+  }
+  
+  /* Productos */
+  .product-item {
+    transition: transform 0.3s ease;
+  }
+  
+  .product-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .product-item img {
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Formulario */
+  #productInquiryForm input,
+  #productInquiryForm select,
+  #productInquiryForm textarea {
+    transition: var(--transition);
+  }
+  
+  #productInquiryForm input:focus,
+  #productInquiryForm select:focus,
+  #productInquiryForm textarea:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.15);
+  }
+  
+  /* ===== ESTILOS PARA MÓVIL (max-width: 768px) ===== */
+  @media (max-width: 768px) {
+    .mobile-card {
+      height: 100vh;
+      padding: var(--spacing-md);
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .mobile-card-content {
+      flex: 1;
+      overflow-y: auto;
+    }
+  
+    .mobile-menu {
+      transform: translateX(-100%);
+      transition: transform 0.3s ease-in-out;
+    }
+  
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
+  
+    .snap-mandatory {
+      scroll-snap-type: y mandatory;
+    }
+  
+    .snap-start {
+      scroll-snap-align: start;
+      height: 100vh;
+    }
+  
+    /* Ajuste para el contenedor principal con botones fijos */
+    .snap-container {
+      padding-bottom: 70px; /* Espacio para los botones fijos */
+    }
+  
+    /* Ajustar grid para móviles */
+    .mobile-grid {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  
+    .mobile-grid > div {
+      flex: 1;
+      min-height: 0; /* Permite que los elementos se ajusten */
+    }
+  
+    .mobile-small-images {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-xs);
+      height: 120px;
+    }
+  
+    /* Ajustes para cards en móvil */
+    .card-content-container {
+      padding: var(--spacing-md);
+      height: auto;
+    }
+  
+    .local-number {
+      width: 100%;
+      text-align: center;
+      margin-bottom: var(--spacing-md);
+    }
+  
+    .card-bottom-section {
+      position: sticky;
+      bottom: 0;
+      background: var(--color-white);
+      padding: var(--spacing-md);
+      margin-top: auto;
+      border-top: 1px solid #e5e7eb;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+      z-index: 10;
+    }
+  
+    .card-bottom-section button {
+      width: 100%;
+    }
+  
+    .card-middle-section {
+      flex: 1;
+      overflow-y: auto;
+      padding-bottom: var(--spacing-md);
+    }
+  
+    /* Botones de navegación fijos para móviles */
+    .mobile-nav-buttons {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid #e5e7eb;
+      z-index: 100;
+      padding: 10px;
+      justify-content: space-around;
+      box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: none;
+      color: #4B5563;
+      font-size: 0.7rem;
+      padding: 8px 12px;
+      border-radius: 8px;
+      transition: var(--transition);
+      min-width: 60px;
+    }
+  
+    .nav-button i {
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+  
+    .nav-button.active {
+      color: var(--color-primary);
+      background-color: rgba(236, 72, 153, 0.1);
+    }
+  
+    .nav-button:hover {
+      color: var(--color-primary);
+    }
+  
+    /* Estilos específicos para la página de detalle */
+    .slider-slide {
+      height: 250px;
+    }
+  
+    .slider-nav {
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+  
+    .top-sales-item {
+      padding: var(--spacing-sm);
+    }
+  
+    .whatsapp-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  
+    .detail-hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .detail-hero p {
+      font-size: 1.1rem;
+    }
+  
+    .product-item {
+      margin-bottom: var(--spacing-md);
+    }
+  
+    .product-item img {
+      height: 200px;
+    }
+  
+    .whatsapp-button {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+    }
+  
+    /* Ajustes para el banner promocional */
+    .promo-banner-content {
+      padding: var(--spacing-lg);
+    }
+    
+    .promo-image-container {
+      height: 200px;
+    }
+  }
+  
+  /* ===== ESTILOS PARA ESCRITORIO (min-width: 768px) ===== */
+  @media (min-width: 768px) {
+    .card-content-container {
+      padding: var(--spacing-xl);
+      justify-content: space-between;
+    }
+  
+    .card-top-section {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  
+    .card-middle-section {
+      margin-top: var(--spacing-lg);
+      margin-bottom: 0;
+    }
+  
+    .card-bottom-section {
+      margin-top: var(--spacing-xl);
+      margin-bottom: 0;
+      display: block;
+    }
+  
+    /* Bordes redondeados para modo desktop */
+    .mobile-small-images img:first-child {
+      border-top-right-radius: 10px;
+    }
+    
+    .mobile-small-images img:last-child {
+      border-bottom-right-radius: 10px;
+    }
+  }
+  
+  /* ===== ESTILOS DE UTILIDAD ===== */
+  .hidden-card {
+    display: none !important;
+  }
+  
+  .no-results {
+    display: none;
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .no-results i {
+    font-size: clamp(2.5rem, 8vw, 3rem);
+    color: var(--color-gray);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .contact-section {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.contact-content {
+  }
+  
+  .contact-content {
     height: 90%;
     width: 90%;
     max-width: 1200px;
-}
-
-/* Mejoras en la distribución de las cards */
-.card-content-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 1.5rem;
-}
-
-.card-top-section {
-    margin-bottom: 0.5rem;
-}
-
-.card-middle-section {
-    margin: 1rem 0;
-}
-
-.card-bottom-section {
-    margin-top: auto;
-}
-
-/* Ajustes para modo móvil */
-@media (max-width: 768px) {
-    .card-content-container {
-        padding: 1rem;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .local-number {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-
-    .card-bottom-section {
-        position: sticky;
-        bottom: 0;
-        background: white;
-        padding: 1rem;
-        margin-top: auto;
-        border-top: 1px solid #e5e7eb;
-        box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-        z-index: 10;
-    }
-
-    .card-bottom-section button {
-        width: 100%;
-    }
-
-    .mobile-card-content {
-        overflow-y: auto;
-        flex: 1;
-        padding-bottom: 0;
-    }
-
-    .card-middle-section {
-        flex: 1;
-        overflow-y: auto;
-        padding-bottom: 1rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .card-content-container {
-        padding: 2rem;
-        justify-content: space-between;
-    }
-
-    .card-top-section {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-    .card-middle-section {
-        margin-top: 1.5rem;
-        margin-bottom: 0;
-    }
-
-    .card-bottom-section {
-        margin-top: 2rem;
-        margin-bottom: 0;
-    }
-
-    /* Mostrar el botón dentro del contenedor en desktop */
-    .card-bottom-section {
-        display: block;
-    }
-}
-
-/* Espaciado más ajustado entre textos */
-.tight-spacing {
-    margin-bottom: 0.5rem;
-}
-
-.tight-spacing-lg {
-    margin-bottom: 1rem;
-}
-
-/* NUEVO: Botones de navegación fijos para móviles */
-.mobile-nav-buttons {
-    display: none;
-}
-
-@media (max-width: 768px) {
-    .mobile-nav-buttons {
-        display: flex;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        border-top: 1px solid #e5e7eb;
-        z-index: 100;
-        padding: 10px;
-        justify-content: space-around;
-        box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
-    }
-
-    .nav-button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: none;
-        border: none;
-        color: #4B5563;
-        font-size: 0.7rem;
-        padding: 8px 12px;
-        border-radius: 8px;
-        transition: all 0.3s ease;
-        min-width: 60px;
-    }
-
-    .nav-button i {
-        font-size: 1.2rem;
-        margin-bottom: 4px;
-    }
-
-    .nav-button.active {
-        color: #EC4899;
-        background-color: rgba(236, 72, 153, 0.1);
-    }
-
-    .nav-button:hover {
-        color: #EC4899;
-    }
-}
-
-/* Estilos específicos para la página de detalle */
-@media (max-width: 768px) {
-    .slider-slide {
-        height: 250px;
-    }
-
-    .slider-nav {
-        padding: 8px 12px;
-        font-size: 16px;
-    }
-
-    .top-sales-item {
-        padding: 0.75rem;
-    }
-
-    .whatsapp-button {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    .detail-hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .detail-hero p {
-        font-size: 1.1rem;
-    }
-
-    .product-item {
-        margin-bottom: 1rem;
-    }
-
-    .product-item img {
-        height: 200px;
-    }
-
-    .whatsapp-button {
-        padding: 8px 16px;
-        font-size: 0.85rem;
-    }
-}
-
-/* Estilos para productos destacados */
-.product-item {
-    transition: transform 0.3s ease;
-}
-
-.product-item:hover {
-    transform: translateY(-5px);
-}
-
-.product-item img {
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Estilos para el formulario */
-#productInquiryForm input,
-#productInquiryForm select,
-#productInquiryForm textarea {
-    transition: all 0.3s ease;
-}
-
-#productInquiryForm input:focus,
-#productInquiryForm select:focus,
-#productInquiryForm textarea:focus {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(236, 72, 153, 0.15);
-}
-
-/* Badges de productos */
-.product-badge {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-
- /* Estilos personalizados para el banner */
- .promo-banner {
-    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
-    color: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.promo-banner-content {
-    padding: 2rem;
-}
-
-.promo-title {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-}
-
-.promo-text {
-    font-size: clamp(1rem, 2vw, 1.2rem);
-    margin-bottom: 1.5rem;
-    line-height: 1.5;
-}
-
-.promo-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 12px 24px;
-    background: white;
-    color: #EC4899;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.promo-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    background: #f8f8f8;
-}
-
-.promo-image {
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .promo-banner-content {
-        padding: 1.5rem;
-    }
-    
-    .promo-image-container {
-        height: 200px;
-    }
-}
-
-/* Añadiendo algunos estilos existentes para mantener consistencia */
-.responsive-text {
-    font-size: clamp(0.9rem, 2vw, 1rem);
-}
-
-.social-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;
-}
-
-.social-icon:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Bordes redondeados para modo desktop */
-@media (min-width: 768px) {
-    .mobile-small-images img:first-child {
-        border-top-right-radius: 10px;
-    }
-    
-    .mobile-small-images img:last-child {
-        border-bottom-right-radius: 10px;
-    }
-}
+  }
