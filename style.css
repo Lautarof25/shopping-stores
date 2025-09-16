@@ -540,3 +540,100 @@
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
+
+
+ /* Estilos personalizados para el banner */
+ .promo-banner {
+    background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+    color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.promo-banner-content {
+    padding: 2rem;
+}
+
+.promo-title {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.promo-text {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.promo-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: white;
+    color: #EC4899;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.promo-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background: #f8f8f8;
+}
+
+.promo-image {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .promo-banner-content {
+        padding: 1.5rem;
+    }
+    
+    .promo-image-container {
+        height: 200px;
+    }
+}
+
+/* Añadiendo algunos estilos existentes para mantener consistencia */
+.responsive-text {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Bordes redondeados para modo desktop */
+@media (min-width: 768px) {
+    .mobile-small-images img:first-child {
+        border-top-right-radius: 10px;
+    }
+    
+    .mobile-small-images img:last-child {
+        border-bottom-right-radius: 10px;
+    }
+}
