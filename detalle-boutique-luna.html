@@ -90,25 +90,6 @@
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
     
-    .whatsapp-button {
-      background: #25d366;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 25px;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-    
-    .whatsapp-button:hover {
-      background: #128c7e;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    }
   </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
@@ -125,7 +106,7 @@
             <span class="text-xl font-bold text-gray-800">Galería Central</span>
           </a>
         </div>
-        <a href="index.html" class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 rounded-lg font-semibold transition">
+        <a href="index.html" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition">
           <i class="fas fa-arrow-left mr-2"></i>Volver al inicio
         </a>
       </div>
@@ -139,9 +120,9 @@
         <span class="inline-block bg-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
           Local 22
         </span>
-        <h1 class="text-4xl md:text-6xl font-bold text-pink-600 mb-4">Boutique Luna</h1>
-        <p class="text-xl text-gray-600 mb-6">Moda femenina de última tendencia</p>
-        <div class="flex flex-wrap justify-center gap-4 text-gray-600">
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-pink-600 mb-4">Boutique Luna</h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-600 mb-6">Moda femenina de última tendencia</p>
+        <div class="flex flex-wrap justify-center gap-4 text-sm md:text-base lg:text-lg text-gray-600">
           <span class="flex items-center">
             <i class="fas fa-clock mr-2"></i>
             <strong>Horario:</strong> 10:00 - 20:00
@@ -171,9 +152,9 @@
     <!-- Descripción básica -->
     <section class="mb-12">
       <div class="bg-white rounded-2xl shadow-xl p-8">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6">Sobre Boutique Luna</h2>
-        <div class="prose prose-lg max-w-none text-gray-700">
-          <p class="mb-6">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-6">Sobre Boutique Luna</h2>
+        <div class="max-w-none text-gray-700">
+          <p class="mb-6 text-sm md:text-base lg:text-lg leading-relaxed">
             Ropa femenina de última tendencia, accesorios y colecciones exclusivas para esta temporada.
             Espacio con probadores y atención personalizada.
           </p>
@@ -181,24 +162,24 @@
         
         <!-- Enlaces y redes sociales -->
         <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-          <a href="#" class="website-link">
+          <a href="#" class="inline-flex items-center gap-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded-full font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
             <i class="fas fa-globe"></i>
             Visitar sitio web
           </a>
-          <div class="social-icons">
-            <a href="#" class="social-icon bg-green-500">
+          <div class="flex justify-center gap-3 flex-wrap">
+            <a href="#" class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="#" class="social-icon bg-blue-600">
+            <a href="#" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="social-icon bg-pink-600">
+            <a href="#" class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" class="social-icon bg-blue-400">
+            <a href="#" class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="#" class="social-icon bg-red-600">
+            <a href="#" class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
               <i class="fab fa-youtube"></i>
             </a>
           </div>
@@ -209,7 +190,7 @@
     <!-- Productos Destacados -->
     <section class="mb-12">
       <div class="bg-white rounded-2xl shadow-xl p-8">
-        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Productos Destacados</h2>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 text-center">Productos Destacados</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="product-item">
             <div class="relative overflow-hidden rounded-xl mb-4">
@@ -220,11 +201,11 @@
               </div>
             </div>
             <div class="text-center">
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Vestido de Noche Elegante</h3>
-              <p class="text-gray-600 mb-3">Colección exclusiva para ocasiones especiales</p>
-              <div class="text-pink-600 font-bold text-lg mb-4">$89.900</div>
+              <h3 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-2">Vestido de Noche Elegante</h3>
+              <p class="text-sm md:text-base lg:text-lg text-gray-600 mb-3">Colección exclusiva para ocasiones especiales</p>
+              <div class="text-pink-600 font-bold text-base md:text-lg lg:text-xl mb-4">$89.900</div>
               <a href="https://wa.me/1234567890?text=Hola, me interesa el Vestido de Noche Elegante" 
-                 class="whatsapp-button">
+                 class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
                 <i class="fab fa-whatsapp"></i>
                 Consultar
               </a>
@@ -240,11 +221,11 @@
               </div>
             </div>
             <div class="text-center">
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Bolso de Mano Premium</h3>
-              <p class="text-gray-600 mb-3">Accesorio único que complementa tu estilo</p>
-              <div class="text-pink-600 font-bold text-lg mb-4">$45.900</div>
+              <h3 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-2">Bolso de Mano Premium</h3>
+              <p class="text-sm md:text-base lg:text-lg text-gray-600 mb-3">Accesorio único que complementa tu estilo</p>
+              <div class="text-pink-600 font-bold text-base md:text-lg lg:text-xl mb-4">$45.900</div>
               <a href="https://wa.me/1234567890?text=Hola, me interesa el Bolso de Mano Premium" 
-                 class="whatsapp-button">
+                 class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
                 <i class="fab fa-whatsapp"></i>
                 Consultar
               </a>
@@ -260,13 +241,13 @@
               </div>
             </div>
             <div class="text-center">
-              <h3 class="text-xl font-semibold text-gray-800 mb-2">Conjunto Casual Chic</h3>
-              <p class="text-gray-600 mb-3">Perfecto para el día a día con estilo</p>
-              <div class="text-pink-600 font-bold text-lg mb-4">
+              <h3 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-2">Conjunto Casual Chic</h3>
+              <p class="text-sm md:text-base lg:text-lg text-gray-600 mb-3">Perfecto para el día a día con estilo</p>
+              <div class="text-pink-600 font-bold text-base md:text-lg lg:text-xl mb-4">
                 <span class="line-through text-gray-400">$65.900</span> $49.900
               </div>
               <a href="https://wa.me/1234567890?text=Hola, me interesa el Conjunto Casual Chic" 
-                 class="whatsapp-button">
+                 class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
                 <i class="fab fa-whatsapp"></i>
                 Consultar
               </a>
@@ -279,32 +260,32 @@
     <!-- Formulario de Consulta -->
     <section class="mb-12">
       <div class="bg-white rounded-2xl shadow-xl p-8">
-        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Consulta sobre Productos</h2>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 text-center">Consulta sobre Productos</h2>
         <div class="max-w-2xl mx-auto">
           <form id="productInquiryForm" class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nombre *</label>
+                <label for="name" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Nombre *</label>
                 <input type="text" id="name" name="name" required
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
               </div>
               <div>
-                <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Teléfono *</label>
+                <label for="phone" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Teléfono *</label>
                 <input type="tel" id="phone" name="phone" required
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
               </div>
             </div>
             
             <div>
-              <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+              <label for="email" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Email</label>
               <input type="email" id="email" name="email"
-                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
             </div>
             
             <div>
-              <label for="productInterest" class="block text-sm font-medium text-gray-700 mb-2">Producto de Interés *</label>
+              <label for="productInterest" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Producto de Interés *</label>
               <select id="productInterest" name="productInterest" required
-                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent">
+                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
                 <option value="">Selecciona un producto</option>
                 <option value="vestido-noche">Vestido de Noche Elegante</option>
                 <option value="bolso-premium">Bolso de Mano Premium</option>
@@ -315,14 +296,14 @@
             </div>
             
             <div>
-              <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mensaje *</label>
+              <label for="message" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Mensaje *</label>
               <textarea id="message" name="message" rows="4" required
                         placeholder="Cuéntanos qué te interesa saber sobre el producto..."
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent"></textarea>
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg"></textarea>
             </div>
             
             <div class="text-center">
-              <button type="submit" class="whatsapp-button text-lg px-8 py-4">
+              <button type="submit" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-base md:text-lg lg:text-xl">
                 <i class="fab fa-whatsapp"></i>
                 Enviar Consulta por WhatsApp
               </button>
@@ -335,7 +316,7 @@
     <!-- Slider de fotos -->
     <section class="mb-12">
       <div class="bg-white rounded-2xl shadow-xl p-8">
-        <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Galería de Fotos</h2>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 text-center">Galería de Fotos</h2>
         <div class="slider-container">
           <div class="slider-track" id="sliderTrack">
             <div class="slider-slide">
@@ -375,8 +356,8 @@
   <footer class="bg-gray-800 text-white py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center">
-        <p class="text-gray-300">© 2024 Galería Central - Boutique Luna</p>
-        <p class="text-gray-400 text-sm mt-2">Local 22 - Moda femenina de última tendencia</p>
+        <p class="text-gray-300 text-sm md:text-base lg:text-lg">© 2024 Galería Central - Boutique Luna</p>
+        <p class="text-gray-400 text-xs md:text-sm lg:text-base mt-2">Local 22 - Moda femenina de última tendencia</p>
       </div>
     </div>
   </footer>

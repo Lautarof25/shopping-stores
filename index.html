@@ -50,61 +50,61 @@
     <nav class="flex-1 p-4 overflow-y-auto" aria-label="Filtros de categorías">
       <div class="search-container">
         <label for="search" class="sr-only">Buscar locales</label>
-        <input id="search" type="text" placeholder="Buscar locales..."
-          class="w-full p-2 pl-3 pr-8 rounded bg-neutral-800 text-gray-200 placeholder-gray-400 focus:outline-none responsive-text"
+        <input id="search" type="text" placeholder="Buscar locales..." 
+          class="w-full p-2 pl-3 pr-8 rounded bg-neutral-800 text-gray-200 placeholder-gray-400 focus:outline-none text-sm md:text-base lg:text-lg"
           aria-label="Buscar locales">
         <button class="clear-search" id="clearSearch" aria-label="Limpiar búsqueda">
           <i class="fas fa-times" aria-hidden="true"></i>
         </button>
       </div>
-
+      
       <ul class="space-y-2">
         <li>
-          <label class="radio-container">
+          <label class="block relative pl-8 mb-3 cursor-pointer text-sm md:text-base lg:text-lg select-none">
             Todos
-            <input type="radio" name="category" value="todos" checked aria-checked="true">
-            <span class="checkmark"></span>
+            <input type="radio" name="category" value="todos" checked aria-checked="true" class="absolute opacity-0 cursor-pointer">
+            <span class="absolute top-0 left-0 h-5 w-5 bg-gray-700 rounded-full transition-all duration-300 hover:bg-gray-600"></span>
           </label>
         </li>
         <li>
-          <label class="radio-container">
+          <label class="block relative pl-8 mb-3 cursor-pointer text-sm md:text-base lg:text-lg select-none">
             Moda
-            <input type="radio" name="category" value="moda" aria-checked="false">
-            <span class="checkmark"></span>
+            <input type="radio" name="category" value="moda" aria-checked="false" class="absolute opacity-0 cursor-pointer">
+            <span class="absolute top-0 left-0 h-5 w-5 bg-gray-700 rounded-full transition-all duration-300 hover:bg-gray-600"></span>
           </label>
         </li>
         <li>
-          <label class="radio-container">
+          <label class="block relative pl-8 mb-3 cursor-pointer text-sm md:text-base lg:text-lg select-none">
             Gastronomía
-            <input type="radio" name="category" value="gastronomía" aria-checked="false">
-            <span class="checkmark"></span>
+            <input type="radio" name="category" value="gastronomía" aria-checked="false" class="absolute opacity-0 cursor-pointer">
+            <span class="absolute top-0 left-0 h-5 w-5 bg-gray-700 rounded-full transition-all duration-300 hover:bg-gray-600"></span>
           </label>
         </li>
         <li>
-          <label class="radio-container">
+          <label class="block relative pl-8 mb-3 cursor-pointer text-sm md:text-base lg:text-lg select-none">
             Tecnología
-            <input type="radio" name="category" value="tecnología" aria-checked="false">
-            <span class="checkmark"></span>
+            <input type="radio" name="category" value="tecnología" aria-checked="false" class="absolute opacity-0 cursor-pointer">
+            <span class="absolute top-0 left-0 h-5 w-5 bg-gray-700 rounded-full transition-all duration-300 hover:bg-gray-600"></span>
           </label>
         </li>
-
+        
         <div class="contact-separator">
-          <li><a href="#contacto" class="block p-2 rounded hover:bg-neutral-800 contact-link responsive-text"
+          <li><a href="#contacto" class="block p-2 rounded hover:bg-neutral-800 text-sm md:text-base lg:text-lg"
               aria-label="Información de contacto">Contacto</a></li>
         </div>
       </ul>
     </nav>
-
+    
     <!-- Footer del sidebar -->
     <div class="sidebar-footer" aria-label="Información de contacto">
-      <h3 class="font-bold mb-2 responsive-text">Visítanos</h3>
-      <p class="text-gray-300 mb-2 responsive-text">
+      <h3 class="font-bold mb-2 text-sm md:text-base lg:text-lg">Visítanos</h3>
+      <p class="text-gray-300 mb-2 text-sm md:text-base lg:text-lg">
         <i class="fas fa-map-marker-alt mr-2" aria-hidden="true"></i>Av. Principal 1234
       </p>
-      <p class="text-gray-300 mb-2 responsive-text">
+      <p class="text-gray-300 mb-2 text-sm md:text-base lg:text-lg">
         <i class="fas fa-phone mr-2" aria-hidden="true"></i>(123) 456-7890
       </p>
-      <p class="text-gray-300 responsive-text">
+      <p class="text-gray-300 text-sm md:text-base lg:text-lg">
         <i class="fas fa-envelope mr-2" aria-hidden="true"></i>info@galeriacentral.com
       </p>
     </div>
@@ -131,61 +131,61 @@
     <nav class="flex-1 p-4 overflow-y-auto" aria-label="Filtros de categorías">
       <div class="search-container">
         <label for="search-mobile" class="sr-only">Buscar locales</label>
-        <input id="search-mobile" type="text" placeholder="Buscar locales..."
-          class="w-full p-2 pl-3 pr-8 rounded bg-neutral-800 text-gray-200 placeholder-gray-400 focus:outline-none responsive-text"
+        <input id="search-mobile" type="text" placeholder="Buscar locales..." 
+          class="w-full p-2 pl-3 pr-8 rounded bg-neutral-800 text-gray-200 placeholder-gray-400 focus:outline-none text-sm md:text-base lg:text-lg"
           aria-label="Buscar locales">
         <button class="clear-search" id="clearSearchMobile" aria-label="Limpiar búsqueda">
           <i class="fas fa-times" aria-hidden="true"></i>
         </button>
       </div>
-
+      
       <ul class="space-y-2">
         <li>
-          <label class="radio-container">
+          <label class="block relative pl-8 mb-3 cursor-pointer text-sm md:text-base lg:text-lg select-none">
             Todos
-            <input type="radio" name="category-mobile" value="todos" checked aria-checked="true">
-            <span class="checkmark"></span>
+            <input type="radio" name="category-mobile" value="todos" checked aria-checked="true" class="absolute opacity-0 cursor-pointer">
+            <span class="absolute top-0 left-0 h-5 w-5 bg-gray-700 rounded-full transition-all duration-300 hover:bg-gray-600"></span>
           </label>
         </li>
         <li>
-          <label class="radio-container">
+          <label class="block relative pl-8 mb-3 cursor-pointer text-sm md:text-base lg:text-lg select-none">
             Moda
-            <input type="radio" name="category-mobile" value="moda" aria-checked="false">
-            <span class="checkmark"></span>
+            <input type="radio" name="category-mobile" value="moda" aria-checked="false" class="absolute opacity-0 cursor-pointer">
+            <span class="absolute top-0 left-0 h-5 w-5 bg-gray-700 rounded-full transition-all duration-300 hover:bg-gray-600"></span>
           </label>
         </li>
         <li>
-          <label class="radio-container">
+          <label class="block relative pl-8 mb-3 cursor-pointer text-sm md:text-base lg:text-lg select-none">
             Gastronomía
-            <input type="radio" name="category-mobile" value="gastronomía" aria-checked="false">
-            <span class="checkmark"></span>
+            <input type="radio" name="category-mobile" value="gastronomía" aria-checked="false" class="absolute opacity-0 cursor-pointer">
+            <span class="absolute top-0 left-0 h-5 w-5 bg-gray-700 rounded-full transition-all duration-300 hover:bg-gray-600"></span>
           </label>
         </li>
         <li>
-          <label class="radio-container">
+          <label class="block relative pl-8 mb-3 cursor-pointer text-sm md:text-base lg:text-lg select-none">
             Tecnología
-            <input type="radio" name="category-mobile" value="tecnología" aria-checked="false">
-            <span class="checkmark"></span>
+            <input type="radio" name="category-mobile" value="tecnología" aria-checked="false" class="absolute opacity-0 cursor-pointer">
+            <span class="absolute top-0 left-0 h-5 w-5 bg-gray-700 rounded-full transition-all duration-300 hover:bg-gray-600"></span>
           </label>
         </li>
-
+        
         <div class="contact-separator">
-          <li><a href="#contacto" class="block p-2 rounded hover:bg-neutral-800 contact-link responsive-text"
+          <li><a href="#contacto" class="block p-2 rounded hover:bg-neutral-800 text-sm md:text-base lg:text-lg"
               aria-label="Información de contacto">Contacto</a></li>
         </div>
       </ul>
     </nav>
-
+    
     <!-- Footer del menú móvil -->
     <div class="sidebar-footer" aria-label="Información de contacto">
-      <h3 class="font-bold mb-2 responsive-text">Visítanos</h3>
-      <p class="text-gray-300 mb-2 responsive-text">
+      <h3 class="font-bold mb-2 text-sm md:text-base lg:text-lg">Visítanos</h3>
+      <p class="text-gray-300 mb-2 text-sm md:text-base lg:text-lg">
         <i class="fas fa-map-marker-alt mr-2" aria-hidden="true"></i>Av. Principal 1234
       </p>
-      <p class="text-gray-300 mb-2 responsive-text">
+      <p class="text-gray-300 mb-2 text-sm md:text-base lg:text-lg">
         <i class="fas fa-phone mr-2" aria-hidden="true"></i>(123) 456-7890
       </p>
-      <p class="text-gray-300 responsive-text">
+      <p class="text-gray-300 text-sm md:text-base lg:text-lg">
         <i class="fas fa-envelope mr-2" aria-hidden="true"></i>info@galeriacentral.com
       </p>
     </div>
@@ -205,15 +205,15 @@
 
     <!-- HERO -->
     <section id="hero" class="snap-section relative flex items-center justify-center bg-cover bg-center"
-      style="background-image: url('https://images.unsplash.com/photo-1481437156560-3205f6a55735?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
+             style="background-image: url('https://images.unsplash.com/photo-1481437156560-3205f6a55735?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');">
       <div class="absolute inset-0 bg-black bg-opacity-50"></div>
       <div class="relative text-center text-white px-6 max-w-2xl">
-        <h1 class="responsive-title font-extrabold mb-6">Bienvenido a Galería Central</h1>
-        <p class="responsive-subtitle mb-8">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-extrabold mb-6">Bienvenido a Galería Central</h1>
+        <p class="text-lg md:text-xl lg:text-2xl mb-8">
           Moda, gastronomía y tecnología en un solo lugar. Descubrí experiencias únicas.
         </p>
         <a href="#tiendas"
-          class="responsive-button px-6 py-3 bg-pink-500 hover:bg-pink-600 rounded-lg font-semibold transition">
+          class="text-sm md:text-base lg:text-lg px-6 py-3 bg-pink-600 hover:bg-pink-700 rounded-lg font-semibold transition-all duration-300 hover:-translate-y-1">
           Explorar tiendas
         </a>
       </div>
@@ -223,8 +223,8 @@
     <div id="noResults" class="snap-section no-results" aria-live="polite" hidden>
       <div>
         <i class="fas fa-search" aria-hidden="true"></i>
-        <h3 class="responsive-title font-bold text-gray-700 mb-2">No se encontraron resultados</h3>
-        <p class="responsive-text text-gray-500">Intenta con otros términos de búsqueda o selecciona una categoría
+        <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-700 mb-2">No se encontraron resultados</h3>
+        <p class="text-sm md:text-base lg:text-lg text-gray-500">Intenta con otros términos de búsqueda o selecciona una categoría
           diferente.</p>
       </div>
     </div>
@@ -247,45 +247,45 @@
           <div class="card-content-container">
             <!-- Sección superior -->
             <div class="card-top-section">
-              <span class="local-number">Local 22</span>
-              <h3 class="responsive-card-title font-bold text-pink-600 tight-spacing" itemprop="name">Boutique Luna</h3>
+              <span class="inline-block bg-pink-600 text-white px-3 py-1 rounded-full text-xs md:text-sm font-semibold uppercase mb-2">Local 22</span>
+              <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-pink-600 mb-2" itemprop="name">Boutique Luna</h3>
 
-              <div class="responsive-card-text text-gray-600 tight-spacing-lg">
-                <p class="mb-1 tight-spacing"><strong>Categoría:</strong> <span itemprop="keywords">Moda</span></p>
-                <p class="tight-spacing"><strong>Horario:</strong> <time itemprop="openingHours" datetime="Mo-Sa 10:00-20:00">10:00 - 20:00</time></p>
+              <div class="text-sm md:text-base lg:text-lg text-gray-600 mb-4">
+                <p class="mb-1"><strong>Categoría:</strong> <span itemprop="keywords">Moda</span></p>
+                <p><strong>Horario:</strong> <time itemprop="openingHours" datetime="Mo-Sa 10:00-20:00">10:00 - 20:00</time></p>
               </div>
             </div>
 
             <!-- Sección media -->
             <div class="card-middle-section">
-              <p class="responsive-card-text text-gray-700 leading-relaxed tight-spacing-lg" itemprop="description">
+              <p class="text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed mb-4" itemprop="description">
                 Ropa femenina de última tendencia, accesorios y colecciones exclusivas para esta temporada.
                 Espacio con probadores y atención personalizada.
               </p>
 
               <!-- Enlace al sitio web -->
-              <div class="text-center md:text-left tight-spacing-lg">
-                <a href="https://www.google.com" class="website-link responsive-text" itemprop="url">
+              <div class="text-center md:text-left mb-4">
+                <a href="https://www.google.com" class="inline-flex items-center gap-2 text-white bg-gradient-to-r from-purple-500 to-pink-600 px-4 py-2 rounded-full font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg" itemprop="url">
                   <i class="fas fa-globe" aria-hidden="true"></i>
                   Visitar sitio web
                 </a>
               </div>
 
               <!-- Iconos de redes sociales -->
-              <div class="social-icons">
-                <a href="https://wa.me/" class="social-icon bg-green-500" aria-label="WhatsApp de Boutique Luna">
+              <div class="flex justify-center gap-3 mt-5 flex-wrap">
+                <a href="https://wa.me/" class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="WhatsApp de Boutique Luna">
                   <i class="fab fa-whatsapp" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.facebook.com/" class="social-icon bg-blue-600" aria-label="Facebook de Boutique Luna">
+                <a href="https://www.facebook.com/" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="Facebook de Boutique Luna">
                   <i class="fab fa-facebook-f" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.instagram.com/" class="social-icon bg-pink-600" aria-label="Instagram de Boutique Luna">
+                <a href="https://www.instagram.com/" class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="Instagram de Boutique Luna">
                   <i class="fab fa-instagram" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.twitter.com/" class="social-icon bg-blue-400" aria-label="Twitter de Boutique Luna">
+                <a href="https://www.twitter.com/" class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="Twitter de Boutique Luna">
                   <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.youtube.com/" class="social-icon bg-red-600" aria-label="YouTube de Boutique Luna">
+                <a href="https://www.youtube.com/" class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="YouTube de Boutique Luna">
                   <i class="fab fa-youtube" aria-hidden="true"></i>
                 </a>
               </div>
@@ -294,7 +294,7 @@
             <!-- Sección inferior para desktop -->
             <div class="card-bottom-section hidden md:block">
               <a href="detalle-boutique-luna.html"
-                class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text inline-block text-center">
+                class="w-full px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg inline-block text-center">
                 Ver más
               </a>
             </div>
@@ -304,7 +304,7 @@
         <!-- Sección inferior fija para móviles -->
         <div class="card-bottom-section md:hidden">
           <a href="detalle-boutique-luna.html"
-            class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text inline-block text-center">
+            class="w-full px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg inline-block text-center">
             Ver más
           </a>
         </div>
@@ -326,87 +326,87 @@
 
       </div>
     </article>
-
+    
    <!-- CARD EJEMPLO 2 - OPTIMIZADA -->
 <article id="techworld" class="snap-section flex items-center justify-center p-4 store-card" data-category="tecnología"
 data-description="dispositivos tecnológicos smartphones tablets accesorios asesoramiento servicio técnico" itemscope itemtype="https://schema.org/Store">
-<div class="w-full h-full max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden 
-        flex flex-col md:grid md:grid-cols-12">
+      <div class="w-full h-full max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden 
+              flex flex-col md:grid md:grid-cols-12">
 
-  <!-- Imagen principal -->
-  <div class="h-64 md:h-full md:col-span-4">
+        <!-- Imagen principal -->
+        <div class="h-64 md:h-full md:col-span-4">
     <img
       src="https://images.unsplash.com/photo-1711397500624-4bd8d6170fff?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       alt="Tech World - Dispositivos tecnológicos y electrónica" class="w-full h-full object-cover" loading="lazy" width="600" height="400" itemprop="image">
-  </div>
-
-  <!-- Columna central -->
-  <div class="flex-1 md:col-span-5 mobile-card-content">
-    <div class="card-content-container">
-      <!-- Sección superior -->
-      <div class="card-top-section">
-        <span class="local-number">Local 15</span>
-        <h3 class="responsive-card-title font-bold text-pink-600 tight-spacing" itemprop="name">Tech World</h3>
-
-        <div class="responsive-card-text text-gray-600 tight-spacing-lg">
-          <p class="mb-1 tight-spacing"><strong>Categoría:</strong> <span itemprop="keywords">Tecnología</span></p>
-          <p class="tight-spacing"><strong>Horario:</strong> <time itemprop="openingHours" datetime="Mo-Sa 9:00-21:00">9:00 - 21:00</time></p>
         </div>
-      </div>
 
-      <!-- Sección media -->
-      <div class="card-middle-section">
-        <p class="responsive-card-text text-gray-700 leading-relaxed tight-spacing-lg" itemprop="description">
-          Los últimos dispositivos tecnológicos, smartphones, tablets y accesorios.
-          Asesoramiento especializado y servicio técnico certificado.
-        </p>
+        <!-- Columna central -->
+        <div class="flex-1 md:col-span-5 mobile-card-content">
+          <div class="card-content-container">
+            <!-- Sección superior -->
+            <div class="card-top-section">
+        <span class="inline-block bg-pink-600 text-white px-3 py-1 rounded-full text-xs md:text-sm font-semibold uppercase mb-2">Local 15</span>
+        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-pink-600 mb-2" itemprop="name">Tech World</h3>
 
-        <!-- Enlace al sitio web -->
-        <div class="text-center md:text-left tight-spacing-lg">
-          <a href="https://www.techworld.example.com" class="website-link responsive-text" itemprop="url" target="_blank" rel="noopener noreferrer">
+        <div class="text-sm md:text-base lg:text-lg text-gray-600 mb-4">
+          <p class="mb-1"><strong>Categoría:</strong> <span itemprop="keywords">Tecnología</span></p>
+          <p><strong>Horario:</strong> <time itemprop="openingHours" datetime="Mo-Sa 9:00-21:00">9:00 - 21:00</time></p>
+              </div>
+            </div>
+
+            <!-- Sección media -->
+            <div class="card-middle-section">
+        <p class="text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed mb-4" itemprop="description">
+                Los últimos dispositivos tecnológicos, smartphones, tablets y accesorios. 
+                Asesoramiento especializado y servicio técnico certificado.
+              </p>
+
+              <!-- Enlace al sitio web -->
+        <div class="text-center md:text-left mb-4">
+          <a href="https://www.techworld.example.com" class="inline-flex items-center gap-2 text-white bg-gradient-to-r from-purple-500 to-pink-600 px-4 py-2 rounded-full font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg" itemprop="url" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-globe" aria-hidden="true"></i>
-            Visitar sitio web
-          </a>
-        </div>
+                  Visitar sitio web
+                </a>
+              </div>
 
-        <!-- Iconos de redes sociales -->
-        <div class="social-icons">
-          <a href="https://wa.me/1234567890" class="social-icon bg-green-500" aria-label="WhatsApp de Tech World">
+              <!-- Iconos de redes sociales -->
+        <div class="flex justify-center gap-3 mt-5 flex-wrap">
+          <a href="https://wa.me/1234567890" class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="WhatsApp de Tech World">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
           </a>
-          <a href="https://www.facebook.com/techworld" class="social-icon bg-blue-600" aria-label="Facebook de Tech World">
+          <a href="https://www.facebook.com/techworld" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="Facebook de Tech World">
             <i class="fab fa-facebook-f" aria-hidden="true"></i>
           </a>
-          <a href="https://www.instagram.com/techworld" class="social-icon bg-pink-600" aria-label="Instagram de Tech World">
+          <a href="https://www.instagram.com/techworld" class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="Instagram de Tech World">
             <i class="fab fa-instagram" aria-hidden="true"></i>
           </a>
-          <a href="https://www.twitter.com/techworld" class="social-icon bg-blue-400" aria-label="Twitter de Tech World">
+          <a href="https://www.twitter.com/techworld" class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="Twitter de Tech World">
             <i class="fab fa-twitter" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
+                </a>
+              </div>
+            </div>
 
-      <!-- Sección inferior para desktop -->
-      <div class="card-bottom-section hidden md:block">
+            <!-- Sección inferior para desktop -->
+            <div class="card-bottom-section hidden md:block">
         <a href="detalle-techworld.html"
-          class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text inline-block text-center">
-          Ver más
+          class="w-full px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg inline-block text-center">
+                Ver más
         </a>
-      </div>
-    </div>
-  </div>
+            </div>
+          </div>
+        </div>
 
-  <!-- Sección inferior fija para móviles -->
-  <div class="card-bottom-section md:hidden">
+        <!-- Sección inferior fija para móviles -->
+        <div class="card-bottom-section md:hidden">
     <a href="detalle-techworld.html"
-      class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text inline-block text-center">
-      Ver más
+      class="w-full px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg inline-block text-center">
+            Ver más
     </a>
-  </div>
+        </div>
 
-  <!-- Columna derecha -->
-  <div class="md:col-span-3 p-4 md:p-2">
-    <div class="mobile-small-images md:grid md:grid-rows-3 md:gap-2 md:h-full">
+        <!-- Columna derecha -->
+        <div class="md:col-span-3 p-4 md:p-2">
+          <div class="mobile-small-images md:grid md:grid-rows-3 md:gap-2 md:h-full">
       <img
         src="https://images.unsplash.com/photo-1598965402089-897ce52e8355?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Smartphones en exhibición en Tech World" class="w-full h-full object-cover" loading="lazy" width="300" height="200">
@@ -416,40 +416,40 @@ data-description="dispositivos tecnológicos smartphones tablets accesorios ases
       <img
         src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Servicio técnico en Tech World" class="w-full h-full object-cover" loading="lazy" width="300" height="200">
-    </div>
-  </div>
+          </div>
+        </div>
 
-</div>
-</article>
+      </div>
+    </article>
 
 
 <section class="w-full max-w-6xl mx-auto promo-banner" itemscope itemtype="https://schema.org/PromotionEvent">
 <div class="grid grid-cols-1 md:grid-cols-12">
   <!-- Columna de contenido -->
   <div class="md:col-span-7 promo-banner-content">
-    <h2 class="promo-title" itemprop="name">¡Gran Apertura en Nuestro Centro Comercial!</h2>
-    <p class="promo-text" itemprop="description">Descubre las mejores ofertas y promociones exclusivas. Más de 50 locales con descuentos
+    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white drop-shadow-lg" itemprop="name">¡Gran Apertura en Nuestro Centro Comercial!</h2>
+    <p class="text-base md:text-lg lg:text-xl mb-6 leading-relaxed text-white" itemprop="description">Descubre las mejores ofertas y promociones exclusivas. Más de 50 locales con descuentos
       especiales durante todo el mes de inauguración.</p>
 
     <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-      <a href="google.com" class="promo-button" itemprop="url">
+      <a href="google.com" class="inline-flex items-center gap-2 bg-white text-pink-600 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" itemprop="url">
         <i class="fas fa-tag" aria-hidden="true"></i> Ver Ofertas
       </a>
 
       <div class="flex gap-3 mt-3 sm:mt-0">
-        <a href="https://wa.me/" class="social-icon bg-green-500" aria-label="WhatsApp del Centro Comercial">
+        <a href="https://wa.me/" class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="WhatsApp del Centro Comercial">
           <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
-        <a href="https://www.facebook.com/" class="social-icon bg-blue-600" aria-label="Facebook del Centro Comercial">
+        <a href="https://www.facebook.com/" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="Facebook del Centro Comercial">
           <i class="fab fa-facebook-f" aria-hidden="true"></i>
         </a>
-        <a href="https://www.instagram.com/" class="social-icon bg-pink-600" aria-label="Instagram del Centro Comercial">
+        <a href="https://www.instagram.com/" class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="Instagram del Centro Comercial">
           <i class="fab fa-instagram" aria-hidden="true"></i>
         </a>
       </div>
     </div>
 
-    <div class="mt-6 flex items-center responsive-text">
+    <div class="mt-6 flex items-center text-sm md:text-base lg:text-lg text-white">
       <i class="fas fa-calendar-alt mr-2" aria-hidden="true"></i>
       <span class="font-semibold mr-3"><time itemprop="startDate" datetime="2023-11-01">Del 1 al 30 de Noviembre</time></span>
       <i class="fas fa-clock ml-4 mr-2" aria-hidden="true"></i>
@@ -470,83 +470,83 @@ data-description="dispositivos tecnológicos smartphones tablets accesorios ases
 <!-- CARD EJEMPLO 3 - OPTIMIZADA -->
 <article id="deliciouspan" class="snap-section flex items-center justify-center p-4 store-card" data-category="gastronomía"
 data-description="comida internacional sabores auténticos ambiente acogedor servicio excepcional platos especiales postres caseros" itemscope itemtype="https://schema.org/FoodEstablishment">
-<div class="w-full h-full max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden 
-        flex flex-col md:grid md:grid-cols-12">
+      <div class="w-full h-full max-w-6xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden 
+              flex flex-col md:grid md:grid-cols-12">
 
-  <!-- Imagen principal -->
-  <div class="h-64 md:h-full md:col-span-4">
+        <!-- Imagen principal -->
+        <div class="h-64 md:h-full md:col-span-4">
     <img
       src="https://images.unsplash.com/photo-1556745750-68295fefafc5?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       alt="Delicious Pan - Panadería y pastelería artesanal" class="w-full h-full object-cover" loading="lazy" width="600" height="400" itemprop="image">
-  </div>
-
-  <!-- Columna central -->
-  <div class="flex-1 md:col-span-5 mobile-card-content">
-    <div class="card-content-container">
-      <!-- Sección superior -->
-      <div class="card-top-section">
-        <span class="local-number">Local 08</span>
-        <h3 class="responsive-card-title font-bold text-pink-600 tight-spacing" itemprop="name">Delicious Pan</h3>
-
-        <div class="responsive-card-text text-gray-600 tight-spacing-lg">
-          <p class="mb-1 tight-spacing"><strong>Categoría:</strong> <span itemprop="servesCuisine">Gastronomía</span></p>
-          <p class="tight-spacing"><strong>Horario:</strong> <time itemprop="openingHours" datetime="Mo-Su 9:00-19:00">9:00 - 19:00</time></p>
         </div>
-      </div>
 
-      <!-- Sección media -->
-      <div class="card-middle-section">
-        <p class="responsive-card-text text-gray-700 leading-relaxed tight-spacing-lg" itemprop="description">
-          Facturas, postres, café, con sabores auténticos. Ambiente acogedor y servicio excepcional.
-          Disfruta de nuestros platos especiales y postres caseros.
-        </p>
+        <!-- Columna central -->
+        <div class="flex-1 md:col-span-5 mobile-card-content">
+          <div class="card-content-container">
+            <!-- Sección superior -->
+            <div class="card-top-section">
+              <span class="inline-block bg-pink-600 text-white px-3 py-1 rounded-full text-xs md:text-sm font-semibold uppercase mb-2">Local 08</span>
+        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-pink-600 mb-2" itemprop="name">Delicious Pan</h3>
 
-        <!-- Enlace al sitio web -->
-        <div class="text-center md:text-left tight-spacing-lg">
-          <a href="google.com" class="website-link responsive-text" itemprop="url" target="_blank" rel="noopener noreferrer">
+              <div class="text-sm md:text-base lg:text-lg text-gray-600 mb-4">
+          <p class="mb-1"><strong>Categoría:</strong> <span itemprop="servesCuisine">Gastronomía</span></p>
+          <p><strong>Horario:</strong> <time itemprop="openingHours" datetime="Mo-Su 9:00-19:00">9:00 - 19:00</time></p>
+              </div>
+            </div>
+
+            <!-- Sección media -->
+            <div class="card-middle-section">
+        <p class="text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed mb-4" itemprop="description">
+                Facturas, postres, café, con sabores auténticos. Ambiente acogedor y servicio excepcional. 
+                Disfruta de nuestros platos especiales y postres caseros.
+              </p>
+
+              <!-- Enlace al sitio web -->
+              <div class="text-center md:text-left mb-4">
+          <a href="google.com" class="inline-flex items-center gap-2 text-white bg-gradient-to-r from-purple-500 to-pink-600 px-4 py-2 rounded-full font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg" itemprop="url" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-globe" aria-hidden="true"></i>
-            Visitar sitio web
-          </a>
-        </div>
+                  Visitar sitio web
+                </a>
+              </div>
 
-        <!-- Iconos de redes sociales -->
-        <div class="social-icons">
-          <a href="https://wa.me/" class="social-icon bg-green-500" aria-label="WhatsApp de Delicious Pan">
+              <!-- Iconos de redes sociales -->
+              <div class="flex justify-center gap-3 mt-5 flex-wrap">
+          <a href="https://wa.me/" class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="WhatsApp de Delicious Pan">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.facebook.com/" class="social-icon bg-blue-600" aria-label="Facebook de Delicious Pan">
+                </a>
+          <a href="https://www.facebook.com/" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="Facebook de Delicious Pan">
             <i class="fab fa-facebook-f" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.instagram.com/" class="social-icon bg-pink-600" aria-label="Instagram de Delicious Pan">
+                </a>
+          <a href="https://www.instagram.com/" class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="Instagram de Delicious Pan">
             <i class="fab fa-instagram" aria-hidden="true"></i>
-          </a>
-          <a href="https://www.tiktok.com/" class="social-icon bg-red-500" aria-label="TikTok de Delicious Pan">
+                </a>
+          <a href="https://www.tiktok.com/" class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="TikTok de Delicious Pan">
             <i class="fab fa-tiktok" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
+                </a>
+              </div>
+            </div>
 
-      <!-- Sección inferior para desktop -->
-      <div class="card-bottom-section hidden md:block">
+            <!-- Sección inferior para desktop -->
+            <div class="card-bottom-section hidden md:block">
         <a href="google.com"
-          class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text inline-block text-center">
-          Ver más
+          class="w-full px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg inline-block text-center">
+                Ver más
         </a>
-      </div>
-    </div>
-  </div>
+            </div>
+          </div>
+        </div>
 
-  <!-- Sección inferior fija para móviles -->
-  <div class="card-bottom-section md:hidden">
+        <!-- Sección inferior fija para móviles -->
+        <div class="card-bottom-section md:hidden">
     <a href="google.com"
-      class="w-full px-6 py-3 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition responsive-text inline-block text-center">
-      Ver más
+      class="w-full px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg inline-block text-center">
+            Ver más
     </a>
-  </div>
+        </div>
 
-  <!-- Columna derecha -->
-  <div class="md:col-span-3 p-4 md:p-2">
-    <div class="mobile-small-images md:grid md:grid-rows-3 md:gap-2 md:h-full">
+        <!-- Columna derecha -->
+        <div class="md:col-span-3 p-4 md:p-2">
+          <div class="mobile-small-images md:grid md:grid-rows-3 md:gap-2 md:h-full">
       <img
         src="https://images.unsplash.com/photo-1483695028939-5bb13f8648b0?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Interior de Delicious Pan - ambiente acogedor" class="w-full h-full object-cover" loading="lazy" width="300" height="200">
@@ -556,14 +556,14 @@ data-description="comida internacional sabores auténticos ambiente acogedor ser
       <img
         src="https://images.unsplash.com/photo-1587314168485-3236d6710814?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
         alt="Postres caseros en Delicious Pan" class="w-full h-full object-cover" loading="lazy" width="300" height="200">
-    </div>
-  </div>
+          </div>
+        </div>
 
-</div>
-</article>
+      </div>
+    </article>
 
 
-<section class="promo-banner" itemscope itemtype="https://schema.org/PromotionEvent">
+<section class="w-full max-w-6xl mx-auto promo-banner" itemscope itemtype="https://schema.org/PromotionEvent">
 <div class="grid grid-cols-1 md:grid-cols-12">
   <!-- Columna de imagen (ahora a la izquierda) -->
   <div class="md:col-span-5 relative">
@@ -575,29 +575,29 @@ data-description="comida internacional sabores auténticos ambiente acogedor ser
 
   <!-- Columna de contenido (ahora a la derecha) -->
   <div class="md:col-span-7 promo-banner-content">
-    <h2 class="promo-title" itemprop="name">¡Nuevo SmartWatch Pro Series X!</h2>
-    <p class="promo-text" itemprop="description">Descubre el reloj inteligente del futuro. Monitoriza tu salud, recibe notificaciones y
+    <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white drop-shadow-lg" itemprop="name">¡Nuevo SmartWatch Pro Series X!</h2>
+    <p class="text-base md:text-lg lg:text-xl mb-6 leading-relaxed text-white" itemprop="description">Descubre el reloj inteligente del futuro. Monitoriza tu salud, recibe notificaciones y
       mantente conectado con estilo. Oferta especial por lanzamiento con descuento exclusivo.</p>
 
     <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-      <a href="google.com class="promo-button" itemprop="url">
+      <a href="google.com" class="inline-flex items-center gap-2 bg-white text-pink-600 px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" itemprop="url">
         <i class="fas fa-shopping-cart mr-2" aria-hidden="true"></i> Comprar Ahora
       </a>
 
       <div class="flex gap-3 mt-3 sm:mt-0">
-        <a href="https://wa.me/" class="social-icon bg-green-500" aria-label="WhatsApp para consultas sobre SmartWatch">
+        <a href="https://wa.me/" class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="WhatsApp para consultas sobre SmartWatch">
           <i class="fab fa-whatsapp" aria-hidden="true"></i>
         </a>
-        <a href="https://www.facebook.com/" class="social-icon bg-blue-600" aria-label="Facebook de Tech World">
+        <a href="https://www.facebook.com/" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="Facebook de Tech World">
           <i class="fab fa-facebook-f" aria-hidden="true"></i>
         </a>
-        <a href="https://www.instagram.com/" class="social-icon bg-pink-600" aria-label="Instagram de Tech World">
+        <a href="https://www.instagram.com/" class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="Instagram de Tech World">
           <i class="fab fa-instagram" aria-hidden="true"></i>
         </a>
       </div>
     </div>
 
-    <div class="mt-6 flex flex-wrap items-center responsive-text">
+    <div class="mt-6 flex flex-wrap items-center text-sm md:text-base lg:text-lg text-white">
       <div class="flex items-center mr-6 mb-2">
         <i class="fas fa-bolt text-yellow-300 mr-2" aria-hidden="true"></i>
         <span class="font-semibold">Batería 7 días</span>
@@ -627,7 +627,7 @@ data-description="local disponible espacio físico y virtual para alquilar" item
       class="w-full h-full object-cover" loading="lazy" width="600" height="400" itemprop="image">
     <!-- Badge Disponible -->
     <span
-      class="absolute top-3 left-3 bg-green-600 text-white px-3 py-1 text-sm font-semibold rounded-full shadow-md">
+      class="absolute top-3 left-3 bg-green-700 text-white px-3 py-1 text-sm font-semibold rounded-full shadow-md">
       Disponible
     </span>
   </div>
@@ -637,37 +637,37 @@ data-description="local disponible espacio físico y virtual para alquilar" item
     <div class="card-content-container">
       <!-- Sección superior -->
       <div class="card-top-section">
-        <span class="local-number">Local 15</span>
-        <h3 class="responsive-card-title font-bold text-green-600 tight-spacing" itemprop="name">Espacio Disponible</h3>
+        <span class="inline-block bg-green-700 text-white px-3 py-1 rounded-full text-xs md:text-sm font-semibold uppercase mb-2">Local 33</span>
+        <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-green-700 mb-2" itemprop="name">Espacio Disponible</h3>
 
-        <div class="responsive-card-text text-gray-600 tight-spacing-lg">
-          <p class="mb-1 tight-spacing"><strong>Estado:</strong> Disponible para alquiler</p>
-          <p class="tight-spacing"><strong>Superficie:</strong> <span itemprop="floorSize" itemscope itemtype="https://schema.org/QuantitativeValue"><span itemprop="value">25</span> <span itemprop="unitCode">MTK</span></span></p>
+        <div class="text-sm md:text-base lg:text-lg text-gray-600 mb-4">
+          <p class="mb-1"><strong>Estado:</strong> Disponible para alquiler</p>
+          <p><strong>Superficie:</strong> <span itemprop="floorSize" itemscope itemtype="https://schema.org/QuantitativeValue"><span itemprop="value">25</span> <span itemprop="unitCode">m2</span></span></p>
         </div>
       </div>
 
       <!-- Sección media -->
       <div class="card-middle-section">
-        <p class="responsive-card-text text-gray-700 leading-relaxed tight-spacing-lg" itemprop="description">
+        <p class="text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed mb-4" itemprop="description">
           Este espacio está disponible para tu negocio o emprendimiento.
           Podés alquilar el <strong>local físico</strong> en la galería, o bien un <strong>espacio
             virtual</strong> en nuestro sitio web para promocionar tu marca.
         </p>
 
         <!-- Enlace de contacto -->
-        <div class="text-center md:text-left tight-spacing-lg">
-          <a href="google.com" class="website-link responsive-text" itemprop="url">
+        <div class="text-center md:text-left mb-4">
+          <a href="google.com" class="inline-flex items-center gap-2 text-white bg-gradient-to-r from-purple-500 to-pink-600 px-4 py-2 rounded-full font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg" itemprop="url">
             <i class="fas fa-envelope" aria-hidden="true"></i>
             Consultar disponibilidad
           </a>
         </div>
 
         <!-- Iconos de contacto -->
-        <div class="social-icons">
-          <a href="https://wa.me/" class="social-icon bg-green-500" aria-label="Contactar por WhatsApp sobre local disponible">
+        <div class="flex justify-center gap-3 mt-5 flex-wrap">
+          <a href="https://wa.me/" class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="Contactar por WhatsApp sobre local disponible">
             <i class="fab fa-whatsapp" aria-hidden="true"></i>
           </a>
-          <a href="mailto:info@galeria.com" class="social-icon bg-blue-600" aria-label="Enviar email sobre local disponible">
+          <a href="mailto:info@galeria.com" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0" aria-label="Enviar email sobre local disponible">
             <i class="fas fa-envelope" aria-hidden="true"></i>
           </a>
         </div>
@@ -676,7 +676,7 @@ data-description="local disponible espacio físico y virtual para alquilar" item
       <!-- Sección inferior para desktop -->
       <div class="card-bottom-section hidden md:block">
         <a href="detalle-local-disponible.html"
-          class="w-full px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition responsive-text inline-block text-center">
+          class="w-full px-6 py-3 bg-green-700 text-white rounded-lg hover:bg-green-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg inline-block text-center">
           Más información
         </a>
       </div>
@@ -686,7 +686,7 @@ data-description="local disponible espacio físico y virtual para alquilar" item
   <!-- Sección inferior fija para móviles -->
   <div class="card-bottom-section md:hidden">
     <a href="detalle-local-disponible.html"
-      class="w-full px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition responsive-text inline-block text-center">
+      class="w-full px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg inline-block text-center">
       Más información
     </a>
   </div>
@@ -713,73 +713,73 @@ data-description="local disponible espacio físico y virtual para alquilar" item
 
 <!-- SECCIÓN DE CONTACTO Y MAPA - OPTIMIZADA -->
 <section id="contacto" class="snap-section contact-section bg-gray-100 p-4" itemscope itemtype="https://schema.org/LocalBusiness">
-<div class="contact-content bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
-  <!-- Información de contacto -->
-  <div class="md:w-2/5 p-8 bg-pink-50 flex flex-col justify-center">
-    <h2 class="responsive-title font-bold mb-6 text-pink-600">Contacto</h2>
-
-    <div class="space-y-4 mb-8">
+      <div class="contact-content bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row">
+        <!-- Información de contacto -->
+        <div class="md:w-2/5 p-8 bg-pink-50 flex flex-col justify-center">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-pink-600">Contacto</h2>
+          
+          <div class="space-y-4 mb-8">
       <div class="flex items-start" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
-        <i class="fas fa-map-marker-alt text-pink-500 mt-1 mr-4 responsive-text" aria-hidden="true"></i>
-        <div>
-          <h3 class="font-semibold responsive-text">Dirección</h3>
-          <p class="text-gray-700 responsive-text" itemprop="streetAddress">Av. Principal 1234</p>
-          <p class="text-gray-700 responsive-text" itemprop="addressLocality">Ciudad</p>
-        </div>
-      </div>
-
-      <div class="flex items-start">
-        <i class="fas fa-phone text-pink-500 mt-1 mr-4 responsive-text" aria-hidden="true"></i>
-        <div>
-          <h3 class="font-semibold responsive-text">Teléfono</h3>
-          <p class="text-gray-700 responsive-text"><a href="tel:+1234567890" itemprop="telephone">(123) 456-7890</a></p>
-        </div>
-      </div>
-
-      <div class="flex items-start">
-        <i class="fas fa-envelope text-pink-500 mt-1 mr-4 responsive-text" aria-hidden="true"></i>
-        <div>
-          <h3 class="font-semibold responsive-text">Email</h3>
-          <p class="text-gray-700 responsive-text"><a href="mailto:info@galeriacentral.com" itemprop="email">info@galeriacentral.com</a></p>
-        </div>
-      </div>
-
-      <div class="flex items-start">
-        <i class="fas fa-clock text-pink-500 mt-1 mr-4 responsive-text" aria-hidden="true"></i>
-        <div>
-          <h3 class="font-semibold responsive-text">Horarios</h3>
-          <p class="text-gray-700 responsive-text" itemprop="openingHours" datetime="Mo-Sa 9:00-22:00">Lunes a Sábado: 9:00 - 22:00</p>
-          <p class="text-gray-700 responsive-text" itemprop="openingHours" datetime="Su 10:00-20:00">Domingos: 10:00 - 20:00</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="social-icons">
-      <a href="https://www.facebook.com/" class="social-icon bg-blue-600" aria-label="Facebook del Centro Comercial">
+        <i class="fas fa-map-marker-alt text-pink-600 mt-1 mr-4 text-sm md:text-base lg:text-lg" aria-hidden="true"></i>
+              <div>
+          <h3 class="font-semibold text-sm md:text-base lg:text-lg">Dirección</h3>
+          <p class="text-gray-700 text-sm md:text-base lg:text-lg" itemprop="streetAddress">Av. Principal 1234</p>
+          <p class="text-gray-700 text-sm md:text-base lg:text-lg" itemprop="addressLocality">Ciudad</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+        <i class="fas fa-phone text-pink-600 mt-1 mr-4 text-sm md:text-base lg:text-lg" aria-hidden="true"></i>
+              <div>
+          <h3 class="font-semibold text-sm md:text-base lg:text-lg">Teléfono</h3>
+          <p class="text-gray-700 text-sm md:text-base lg:text-lg"><a href="tel:+1234567890" itemprop="telephone">(123) 456-7890</a></p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+        <i class="fas fa-envelope text-pink-600 mt-1 mr-4 text-sm md:text-base lg:text-lg" aria-hidden="true"></i>
+              <div>
+          <h3 class="font-semibold text-sm md:text-base lg:text-lg">Email</h3>
+          <p class="text-gray-700 text-sm md:text-base lg:text-lg"><a href="mailto:info@galeriacentral.com" itemprop="email">info@galeriacentral.com</a></p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+        <i class="fas fa-clock text-pink-600 mt-1 mr-4 text-sm md:text-base lg:text-lg" aria-hidden="true"></i>
+              <div>
+          <h3 class="font-semibold text-sm md:text-base lg:text-lg">Horarios</h3>
+          <p class="text-gray-700 text-sm md:text-base lg:text-lg" itemprop="openingHours" datetime="Mo-Sa 9:00-22:00">Lunes a Sábado: 9:00 - 22:00</p>
+          <p class="text-gray-700 text-sm md:text-base lg:text-lg" itemprop="openingHours" datetime="Su 10:00-20:00">Domingos: 10:00 - 20:00</p>
+              </div>
+            </div>
+          </div>
+          
+    <div class="flex justify-center gap-3 flex-wrap">
+      <a href="https://www.facebook.com/" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="Facebook del Centro Comercial">
         <i class="fab fa-facebook-f" aria-hidden="true"></i>
       </a>
-      <a href="https://www.instagram.com/" class="social-icon bg-pink-600" aria-label="Instagram del Centro Comercial">
+      <a href="https://www.instagram.com/" class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="Instagram del Centro Comercial">
         <i class="fab fa-instagram" aria-hidden="true"></i>
       </a>
-      <a href="https://www.twitter.com/" class="social-icon bg-blue-400" aria-label="Twitter del Centro Comercial">
+      <a href="https://www.twitter.com/" class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="Twitter del Centro Comercial">
         <i class="fab fa-twitter" aria-hidden="true"></i>
       </a>
-      <a href="https://wa.me/" class="social-icon bg-green-500" aria-label="WhatsApp del Centro Comercial">
+      <a href="https://wa.me/" class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg" aria-label="WhatsApp del Centro Comercial">
         <i class="fab fa-whatsapp" aria-hidden="true"></i>
-      </a>
-    </div>
-  </div>
-
-  <!-- Mapa -->
-  <div class="md:w-3/5 h-64 md:h-auto">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.250343362866!2d-64.1882492244047!3d-31.41375509922885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28457e3d2a5%3A0xdeb7b7dbb93c5b4f!2sPatio%20Olmos!5e0!3m2!1ses!2sar!4v1685579008288!5m2!1ses!2sar"
+            </a>
+          </div>
+        </div>
+        
+        <!-- Mapa -->
+        <div class="md:w-3/5 h-64 md:h-auto">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.250343362866!2d-64.1882492244047!3d-31.41375509922885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28457e3d2a5%3A0xdeb7b7dbb93c5b4f!2sPatio%20Olmos!5e0!3m2!1ses!2sar!4v1685579008288!5m2!1ses!2sar" 
       class="w-full h-full border-0" allowfullscreen="" loading="lazy"
       referrerpolicy="no-referrer-when-downgrade" title="Mapa de ubicación del centro comercial">
-    </iframe>
-  </div>
-</div>
-</section>
+          </iframe>
+        </div>
+      </div>
+    </section>
 
   </main>
   <script src="script.js"></script>
