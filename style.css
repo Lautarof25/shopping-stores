@@ -338,7 +338,7 @@
   }
   
   /* ===== ESTILOS PARA MÓVIL (max-width: 768px) ===== */
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .mobile-card {
       height: 100vh;
       padding: var(--spacing-md);
