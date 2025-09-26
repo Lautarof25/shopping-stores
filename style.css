@@ -159,14 +159,6 @@
   background: #94a3b8;
 }
 
-/* Íconos sociales MEJORADOS */
-.social-icon {
-  @apply w-10 h-10 rounded-full flex items-center justify-center text-white 
-         transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg 
-         flex-shrink-0 text-base;
-  /* Tamaño consistente y mejor alineación */
-}
-
 /* Scrollbar mejorado */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
