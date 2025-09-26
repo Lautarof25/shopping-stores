@@ -168,4 +168,57 @@ window.addEventListener('load', function() {
     
 });
 
+// Funciones auxiliares para los botones del no-results
+function clearSearch() {
+    const searchInputs = document.querySelectorAll('#search, #search-mobile');
+    searchInputs.forEach(input => {
+        input.value = '';
+    });
+    
+    const category = getSelectedCategory();
+    filterStores(category, '');
+    scrollToFirstVisible();
+}
+
+function showAllStores() {
+    const radios = document.querySelectorAll('input[value="todos"]');
+    radios.forEach(radio => {
+        radio.checked = true;
+        radio.dispatchEvent(new Event('change'));
+    });
+}
+
+// Modificar la función filterStores para usar clases de Tailwind
+function filterStores(category, searchText) {
+    const storeCards = document.querySelectorAll('.store-card');
+    let visibleCards = 0;
+    
+    storeCards.forEach(card => {
+        const cardCategory = card.getAttribute('data-category');
+        const cardDescription = card.getAttribute('data-description');
+        
+        const categoryMatch = category === 'todos' || cardCategory === category;
+        const searchMatch = !searchText || cardDescription.toLowerCase().includes(searchText.toLowerCase());
+        
+        if (categoryMatch && searchMatch) {
+            card.classList.remove('hidden'); // Usar 'hidden' de Tailwind en lugar de 'hidden-card'
+            visibleCards++;
+        } else {
+            card.classList.add('hidden'); // Usar 'hidden' de Tailwind
+        }
+    });
+    
+    // Mostrar u ocultar mensaje de no resultados
+    const noResults = document.getElementById('noResults');
+    if (visibleCards === 0) {
+        noResults.classList.remove('hidden');
+        noResults.setAttribute('aria-hidden', 'false');
+    } else {
+        noResults.classList.add('hidden');
+        noResults.setAttribute('aria-hidden', 'true');
+    }
+    
+    return visibleCards;
+}
+
 window.addEventListener('resize', adjustHeights);
