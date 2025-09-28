@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,29 +13,29 @@
     .detail-hero {
       background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
     }
-    
+
     .slider-container {
       position: relative;
       overflow: hidden;
       border-radius: 12px;
     }
-    
+
     .slider-track {
       display: flex;
       transition: transform 0.5s ease-in-out;
     }
-    
+
     .slider-slide {
       min-width: 100%;
       height: 300px;
     }
-    
+
     .slider-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    
+
     .slider-nav {
       position: absolute;
       top: 50%;
@@ -47,22 +48,22 @@
       border-radius: 50%;
       font-size: 18px;
     }
-    
+
     .slider-nav.prev {
       left: 10px;
     }
-    
+
     .slider-nav.next {
       right: 10px;
     }
-    
+
     .slider-dots {
       display: flex;
       justify-content: center;
       gap: 8px;
       margin-top: 15px;
     }
-    
+
     .slider-dot {
       width: 12px;
       height: 12px;
@@ -72,11 +73,11 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
-    
+
     .slider-dot.active {
       background: #ec4899;
     }
-    
+
     .top-sales-item {
       background: white;
       border-radius: 12px;
@@ -84,14 +85,14 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
     }
-    
+
     .top-sales-item:hover {
       transform: translateY(-2px);
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
-    
   </style>
 </head>
+
 <body class="bg-gray-100 text-gray-900">
 
   <!-- Header con navegación -->
@@ -101,12 +102,15 @@
         <div class="flex items-center">
           <a href="index.html" class="flex items-center space-x-3">
             <svg width="40" height="28" viewBox="0 0 56 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M23.3333 0C23.7194 0 24.1033 0.00932962 24.4847 0.0280265C24.4924 0.0284028 24.4989 0.0222809 24.4989 0.0145938V0.0145938C24.4989 0.00716838 24.5049 0.0011489 24.5123 0.0011489H45.8418C46.2974 0.00137965 46.6667 0.373466 46.6667 0.83295C46.6666 1.05356 46.5798 1.26515 46.4251 1.42119L40.8322 7.05882H52.7444C53.5415 7.05882 54.27 7.52957 54.5456 8.27757C55.4857 10.829 56 13.5892 56 16.4706C56 29.4655 45.5533 40 32.6667 40C32.2808 40 31.8971 39.9896 31.5158 39.9709C31.5078 39.9705 31.5011 39.9768 31.5011 39.9848V39.9848C31.5011 39.9926 31.4949 39.9989 31.4871 39.9989H10.1582C9.7026 39.9986 9.33333 39.6265 9.33333 39.1671C9.33336 38.9464 9.42022 38.7348 9.57487 38.5788L15.1655 32.9412H3.25562C2.45846 32.9412 1.73002 32.4704 1.4544 31.7224C0.514256 29.171 0 26.4109 0 23.5294C0 10.5345 10.4467 0 23.3333 0ZM31.3177 16.6556C29.3919 14.383 26.5301 12.9412 23.3333 12.9412C17.5343 12.9412 12.8333 17.6817 12.8333 23.5294C12.8333 24.7672 13.0456 25.9547 13.4326 27.0588H20.9989L24.6823 23.3444C26.6081 25.617 29.4699 27.0588 32.6667 27.0588C38.4657 27.0588 43.1667 22.3183 43.1667 16.4706C43.1667 15.2328 42.9544 14.0453 42.5674 12.9412H35.0011L31.3177 16.6556Z" fill="#3754FA"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M23.3333 0C23.7194 0 24.1033 0.00932962 24.4847 0.0280265C24.4924 0.0284028 24.4989 0.0222809 24.4989 0.0145938V0.0145938C24.4989 0.00716838 24.5049 0.0011489 24.5123 0.0011489H45.8418C46.2974 0.00137965 46.6667 0.373466 46.6667 0.83295C46.6666 1.05356 46.5798 1.26515 46.4251 1.42119L40.8322 7.05882H52.7444C53.5415 7.05882 54.27 7.52957 54.5456 8.27757C55.4857 10.829 56 13.5892 56 16.4706C56 29.4655 45.5533 40 32.6667 40C32.2808 40 31.8971 39.9896 31.5158 39.9709C31.5078 39.9705 31.5011 39.9768 31.5011 39.9848V39.9848C31.5011 39.9926 31.4949 39.9989 31.4871 39.9989H10.1582C9.7026 39.9986 9.33333 39.6265 9.33333 39.1671C9.33336 38.9464 9.42022 38.7348 9.57487 38.5788L15.1655 32.9412H3.25562C2.45846 32.9412 1.73002 32.4704 1.4544 31.7224C0.514256 29.171 0 26.4109 0 23.5294C0 10.5345 10.4467 0 23.3333 0ZM31.3177 16.6556C29.3919 14.383 26.5301 12.9412 23.3333 12.9412C17.5343 12.9412 12.8333 17.6817 12.8333 23.5294C12.8333 24.7672 13.0456 25.9547 13.4326 27.0588H20.9989L24.6823 23.3444C26.6081 25.617 29.4699 27.0588 32.6667 27.0588C38.4657 27.0588 43.1667 22.3183 43.1667 16.4706C43.1667 15.2328 42.9544 14.0453 42.5674 12.9412H35.0011L31.3177 16.6556Z"
+                fill="#3754FA"></path>
             </svg>
             <span class="text-xl font-bold text-gray-800">Galería Central</span>
           </a>
         </div>
-        <a href="index.html" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition">
+        <a href="index.html"
+          class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg font-semibold transition">
           <i class="fas fa-arrow-left mr-2"></i>Volver al inicio
         </a>
       </div>
@@ -140,15 +144,16 @@
   <section class="py-8">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="rounded-2xl overflow-hidden shadow-xl">
-        <img src="https://images.unsplash.com/photo-1555529771-122e5d9f2341?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Boutique Luna - Vista del local" 
-             class="w-full h-64 md:h-96 object-cover">
+        <img
+          src="https://images.unsplash.com/photo-1555529771-122e5d9f2341?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Boutique Luna - Vista del local" class="w-full h-64 md:h-96 object-cover">
       </div>
     </div>
   </section>
 
   <!-- Contenido principal -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    
+
     <!-- Descripción básica -->
     <section class="mb-12">
       <div class="bg-white rounded-2xl shadow-xl p-8">
@@ -159,27 +164,33 @@
             Espacio con probadores y atención personalizada.
           </p>
         </div>
-        
+
         <!-- Enlaces y redes sociales -->
         <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-          <a href="#" class="inline-flex items-center gap-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded-full font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
+          <a href="#"
+            class="inline-flex items-center gap-2 text-white bg-gradient-to-r from-purple-500 to-pink-500 px-4 py-2 rounded-full font-medium transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
             <i class="fas fa-globe"></i>
             Visitar sitio web
           </a>
           <div class="flex justify-center gap-3 flex-wrap">
-            <a href="#" class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a href="#" class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
               <i class="fab fa-facebook-f"></i>
             </a>
-            <a href="#" class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-pink-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
               <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-blue-400 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
               <i class="fab fa-twitter"></i>
             </a>
-            <a href="#" class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-red-600 flex items-center justify-center text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex-shrink-0">
               <i class="fab fa-youtube"></i>
             </a>
           </div>
@@ -194,48 +205,56 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div class="product-item">
             <div class="relative overflow-hidden rounded-xl mb-4">
-              <img src="https://images.unsplash.com/flagged/photo-1585052201332-b8c0ce30972f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vestido de Noche Elegante" 
-                   class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
+              <img
+                src="https://images.unsplash.com/flagged/photo-1585052201332-b8c0ce30972f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Vestido de Noche Elegante"
+                class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
               <div class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                 Top Venta
               </div>
             </div>
             <div class="text-center">
               <h3 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-2">Vestido de Noche Elegante</h3>
-              <p class="text-sm md:text-base lg:text-lg text-gray-600 mb-3">Colección exclusiva para ocasiones especiales</p>
+              <p class="text-sm md:text-base lg:text-lg text-gray-600 mb-3">Colección exclusiva para ocasiones
+                especiales</p>
               <div class="text-pink-600 font-bold text-base md:text-lg lg:text-xl mb-4">$89.900</div>
-              <a href="https://wa.me/1234567890?text=Hola, me interesa el Vestido de Noche Elegante" 
-                 class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
+              <a href="https://wa.me/1234567890?text=Hola, me interesa el Vestido de Noche Elegante"
+                class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
                 <i class="fab fa-whatsapp"></i>
                 Consultar
               </a>
             </div>
           </div>
-          
+
           <div class="product-item">
             <div class="relative overflow-hidden rounded-xl mb-4">
-              <img src="https://images.unsplash.com/photo-1705909237050-7a7625b47fac?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bolso de Mano Premium" 
-                   class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
+              <img
+                src="https://images.unsplash.com/photo-1705909237050-7a7625b47fac?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Bolso de Mano Premium"
+                class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
               <div class="absolute top-4 right-4 bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                 Nuevo
               </div>
             </div>
             <div class="text-center">
               <h3 class="text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 mb-2">Bolso de Mano Premium</h3>
-              <p class="text-sm md:text-base lg:text-lg text-gray-600 mb-3">Accesorio único que complementa tu estilo</p>
+              <p class="text-sm md:text-base lg:text-lg text-gray-600 mb-3">Accesorio único que complementa tu estilo
+              </p>
               <div class="text-pink-600 font-bold text-base md:text-lg lg:text-xl mb-4">$45.900</div>
-              <a href="https://wa.me/1234567890?text=Hola, me interesa el Bolso de Mano Premium" 
-                 class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
+              <a href="https://wa.me/1234567890?text=Hola, me interesa el Bolso de Mano Premium"
+                class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
                 <i class="fab fa-whatsapp"></i>
                 Consultar
               </a>
             </div>
           </div>
-          
+
           <div class="product-item">
             <div class="relative overflow-hidden rounded-xl mb-4">
-              <img src="https://images.unsplash.com/photo-1606030493668-ad25bc7f497a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Conjunto Casual Chic" 
-                   class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
+              <img
+                src="https://images.unsplash.com/photo-1606030493668-ad25bc7f497a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Conjunto Casual Chic"
+                class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
               <div class="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
                 Oferta
               </div>
@@ -246,8 +265,8 @@
               <div class="text-pink-600 font-bold text-base md:text-lg lg:text-xl mb-4">
                 <span class="line-through text-gray-400">$65.900</span> $49.900
               </div>
-              <a href="https://wa.me/1234567890?text=Hola, me interesa el Conjunto Casual Chic" 
-                 class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
+              <a href="https://wa.me/1234567890?text=Hola, me interesa el Conjunto Casual Chic"
+                class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-sm md:text-base lg:text-lg">
                 <i class="fab fa-whatsapp"></i>
                 Consultar
               </a>
@@ -260,32 +279,38 @@
     <!-- Formulario de Consulta -->
     <section class="mb-12">
       <div class="bg-white rounded-2xl shadow-xl p-8">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 text-center">Consulta sobre Productos</h2>
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-8 text-center">Consulta sobre Productos
+        </h2>
         <div class="max-w-2xl mx-auto">
           <form id="productInquiryForm" class="space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label for="name" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Nombre *</label>
+                <label for="name" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Nombre
+                  *</label>
                 <input type="text" id="name" name="name" required
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
               </div>
               <div>
-                <label for="phone" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Teléfono *</label>
+                <label for="phone" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Teléfono
+                  *</label>
                 <input type="tel" id="phone" name="phone" required
-                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
               </div>
             </div>
-            
+
             <div>
-              <label for="email" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Email</label>
+              <label for="email"
+                class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Email</label>
               <input type="email" id="email" name="email"
-                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
             </div>
-            
+
             <div>
-              <label for="productInterest" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Producto de Interés *</label>
+              <label for="productInterest"
+                class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Producto de Interés
+                *</label>
               <select id="productInterest" name="productInterest" required
-                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg">
                 <option value="">Selecciona un producto</option>
                 <option value="vestido-noche">Vestido de Noche Elegante</option>
                 <option value="bolso-premium">Bolso de Mano Premium</option>
@@ -294,16 +319,18 @@
                 <option value="otro">Otro producto</option>
               </select>
             </div>
-            
+
             <div>
-              <label for="message" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Mensaje *</label>
+              <label for="message" class="block text-sm md:text-base lg:text-lg font-medium text-gray-700 mb-2">Mensaje
+                *</label>
               <textarea id="message" name="message" rows="4" required
-                        placeholder="Cuéntanos qué te interesa saber sobre el producto..."
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg"></textarea>
+                placeholder="Cuéntanos qué te interesa saber sobre el producto..."
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent text-sm md:text-base lg:text-lg"></textarea>
             </div>
-            
+
             <div class="text-center">
-              <button type="submit" class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-base md:text-lg lg:text-xl">
+              <button type="submit"
+                class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:-translate-y-1 hover:shadow-lg text-base md:text-lg lg:text-xl">
                 <i class="fab fa-whatsapp"></i>
                 Enviar Consulta por WhatsApp
               </button>
@@ -320,22 +347,32 @@
         <div class="slider-container">
           <div class="slider-track" id="sliderTrack">
             <div class="slider-slide">
-              <img src="https://images.unsplash.com/photo-1640923160720-35dddb6348ab?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Productos de moda">
+              <img
+                src="https://images.unsplash.com/photo-1640923160720-35dddb6348ab?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Productos de moda">
             </div>
             <div class="slider-slide">
-              <img src="https://images.unsplash.com/photo-1573879500655-98f2012dd1db?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Interior del local">
+              <img
+                src="https://images.unsplash.com/photo-1573879500655-98f2012dd1db?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Interior del local">
             </div>
             <div class="slider-slide">
-              <img src="https://images.unsplash.com/photo-1603400521630-9f2de124b33b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Colección de accesorios">
+              <img
+                src="https://images.unsplash.com/photo-1603400521630-9f2de124b33b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Colección de accesorios">
             </div>
             <div class="slider-slide">
-              <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vestidos de temporada">
+              <img
+                src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Vestidos de temporada">
             </div>
             <div class="slider-slide">
-              <img src="https://images.unsplash.com/photo-1558191053-8edcb01e1da3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Zapatos y calzado">
+              <img
+                src="https://images.unsplash.com/photo-1558191053-8edcb01e1da3?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Zapatos y calzado">
             </div>
           </div>
-          
+
           <button class="slider-nav prev" id="prevBtn">
             <i class="fas fa-chevron-left"></i>
           </button>
@@ -343,7 +380,7 @@
             <i class="fas fa-chevron-right"></i>
           </button>
         </div>
-        
+
         <div class="slider-dots" id="sliderDots">
           <!-- Los dots se generarán dinámicamente -->
         </div>
@@ -383,7 +420,7 @@
 
     function updateSlider() {
       sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-      
+
       // Actualizar dots
       document.querySelectorAll('.slider-dot').forEach((dot, index) => {
         dot.classList.toggle('active', index === currentSlide);
@@ -413,16 +450,16 @@
     setInterval(nextSlide, 5000);
 
     // Funcionalidad del formulario
-    document.getElementById('productInquiryForm').addEventListener('submit', function(e) {
+    document.getElementById('productInquiryForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      
+
       const formData = new FormData(this);
       const name = formData.get('name');
       const phone = formData.get('phone');
       const email = formData.get('email');
       const product = formData.get('productInterest');
       const message = formData.get('message');
-      
+
       // Crear mensaje para WhatsApp
       let whatsappMessage = `Hola! Me interesa consultar sobre productos de Boutique Luna.\n\n`;
       whatsappMessage += `*Datos de contacto:*\n`;
@@ -431,7 +468,7 @@
       if (email) whatsappMessage += `Email: ${email}\n`;
       whatsappMessage += `\n*Producto de interés:* ${getProductName(product)}\n\n`;
       whatsappMessage += `*Mensaje:*\n${message}`;
-      
+
       // Abrir WhatsApp
       const whatsappUrl = `https://wa.me/1234567890?text=${encodeURIComponent(whatsappMessage)}`;
       window.open(whatsappUrl, '_blank');
@@ -450,4 +487,5 @@
   </script>
 
 </body>
+
 </html>

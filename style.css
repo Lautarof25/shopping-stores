@@ -1,13 +1,9 @@
-/* ===== CSS MÍNIMO NECESARIO - Tailwind no puede reemplazar esto ===== */
-
-/* Variables CSS personalizadas (para consistencia) */
 :root {
   --color-primary: #EC4899;
   --color-secondary: #8B5CF6;
   --color-accent: #ff006e;
 }
 
-/* Snap container y secciones - ESENCIAL */
 .snap-container {
   scroll-snap-type: y proximity;
   overflow-y: scroll;
@@ -19,9 +15,8 @@
   min-height: 100vh;
 }
 
-/* Comportamiento específico de cards en móvil */
-.store-card { 
-  overflow-y: auto; 
+.store-card {
+  overflow-y: auto;
 }
 
 .card-content-container {
@@ -30,7 +25,7 @@
   height: 100%;
 }
 
-.card-middle-section { 
+.card-middle-section {
   flex: 1;
   overflow-y: auto;
 }
@@ -39,28 +34,25 @@
   margin-top: auto;
 }
 
-/* Menú móvil - transform animation */
 .mobile-menu {
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
 }
 
-.mobile-menu.open { 
-  transform: translateX(0); 
+.mobile-menu.open {
+  transform: translateX(0);
 }
 
-/* Snap mandatory para móvil */
 @media (max-width: 767px) {
-  .snap-mandatory { 
-    scroll-snap-type: y mandatory; 
+  .snap-mandatory {
+    scroll-snap-type: y mandatory;
   }
-  
+
   .snap-start {
     scroll-snap-align: start;
     height: 100vh;
   }
 
-  /* Bottom section sticky en móvil */
   .card-bottom-section {
     position: sticky;
     bottom: 0;
@@ -70,13 +62,12 @@
   }
 }
 
-/* Radio buttons personalizados - MANTENER */
-.radio-container input:checked ~ .checkmark { 
-  background-color: var(--color-primary); 
+.radio-container input:checked~.checkmark {
+  background-color: var(--color-primary);
 }
 
-.radio-container:hover input ~ .checkmark { 
-  background-color: #4B5563; 
+.radio-container:hover input~.checkmark {
+  background-color: #4B5563;
 }
 
 .checkmark:after {
@@ -91,37 +82,50 @@
   background: white;
 }
 
-.radio-container input:checked ~ .checkmark:after { 
-  display: block; 
+.radio-container input:checked~.checkmark:after {
+  display: block;
 }
 
-/* Animación pulse para discount badge */
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .discount-badge {
   animation: pulse 2s infinite;
 }
 
-/* Utilidades específicas */
-.hidden-card { display: none !important; }
-.no-results { display: none; }
-
-/* Clear search button behavior */
-.clear-search { display: none; }
-.search-container input:not(:placeholder-shown) + .clear-search { 
-  display: block; 
+.hidden-card {
+  display: none !important;
 }
 
-/* Animaciones personalizadas opcionales */
+.no-results {
+  display: none;
+}
+
+.clear-search {
+  display: none;
+}
+
+.search-container input:not(:placeholder-shown)+.clear-search {
+  display: block;
+}
+
 @keyframes fade-in-up {
   0% {
     opacity: 0;
     transform: translateY(30px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -140,7 +144,6 @@
   animation-delay: 0.4s;
 }
 
-/* Scrollbar personalizado para la sección media */
 .custom-scrollbar::-webkit-scrollbar {
   width: 4px;
 }
@@ -159,7 +162,6 @@
   background: #94a3b8;
 }
 
-/* Scrollbar mejorado */
 .custom-scrollbar::-webkit-scrollbar {
   width: 6px;
 }
