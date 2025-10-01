@@ -250,7 +250,7 @@
 
     <!-- HERO -->
     <section id="hero"
-      class="snap-section relative flex items-center justify-center min-h-screen bg-cover bg-center bg-fixed"
+      class="snap-section relative flex items-center justify-center min-h-[75vh] bg-cover bg-center bg-fixed"
       style="background-image: url('https://images.unsplash.com/photo-1481437156560-3205f6a55735?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
       role="banner" aria-label="Bienvenida a Galería Central">
 
@@ -531,6 +531,106 @@
 
       </div>
     </article>
+
+    <!-- BANNER PROMOCIONAL STAND UP -->
+    <section class="w-full max-w-6xl mx-auto my-8 rounded-2xl overflow-hidden
+bg-gradient-to-r from-amber-500 to-orange-600 shadow-2xl
+transform hover:-translate-y-1 transition-transform duration-300" itemscope itemtype="https://schema.org/ComedyEvent">
+
+      <div class="grid grid-cols-1 md:grid-cols-12">
+
+        <!-- Columna de contenido -->
+        <div class="md:col-span-7 p-8 lg:p-10 flex flex-col justify-center text-white">
+
+          <!-- Badge de promoción -->
+          <div class="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full 
+  text-sm font-bold uppercase mb-4 self-start">
+            😂 Noche de Comedia
+          </div>
+
+          <!-- Título -->
+          <h2 class="text-3xl lg:text-4xl xl:text-5xl font-bold mb-4 leading-tight drop-shadow-lg" itemprop="name">
+            Stand Up en el Paseo
+          </h2>
+
+          <!-- Descripción -->
+          <p class="text-lg lg:text-xl mb-6 leading-relaxed opacity-90" itemprop="description">
+            Los mejores comediantes locales te harán reír a carcajadas.
+            Disfruta de un espectáculo único mientras haces tus compras.
+            ¡Risas garantizadas para toda la familia!
+          </p>
+
+          <!-- Botones y redes -->
+          <div class="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-6">
+
+            <!-- Botón principal -->
+            <a href="#reservar" class="inline-flex items-center gap-3 bg-white text-orange-600 px-6 py-3 rounded-full 
+  font-bold text-lg transition-all duration-300 
+  hover:bg-gray-100 hover:shadow-xl hover:-translate-y-0.5
+  focus:outline-none focus:ring-4 focus:ring-white/50">
+              <i class="fas fa-laugh-beam text-lg"></i>
+              Reservar Lugar
+            </a>
+
+            <!-- Redes sociales -->
+            <div class="flex gap-3">
+              <a href="https://wa.me/" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center 
+    text-white transition-all duration-300 
+    hover:bg-white/30 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fab fa-whatsapp text-sm"></i>
+              </a>
+              <a href="https://www.facebook.com/" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center 
+    text-white transition-all duration-300 
+    hover:bg-white/30 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fab fa-facebook-f text-sm"></i>
+              </a>
+              <a href="https://www.instagram.com/" class="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center 
+    text-white transition-all duration-300 
+    hover:bg-white/30 hover:-translate-y-0.5 hover:shadow-lg">
+                <i class="fab fa-instagram text-sm"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Información de fecha y horario -->
+          <div class="flex flex-col sm:flex-row gap-4 text-sm lg:text-base">
+            <div class="flex items-center">
+              <i class="fas fa-calendar-alt mr-3 text-white/80"></i>
+              <span class="font-semibold">
+                <time itemprop="startDate" datetime="2025-11-12">12 Noviembre 2025</time>
+              </span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-clock mr-3 text-white/80"></i>
+              <span class="font-semibold">19:00 - 21:00 hs</span>
+            </div>
+            <div class="flex items-center">
+              <i class="fas fa-map-marker-alt mr-3 text-white/80"></i>
+              <span class="font-semibold" itemprop="location">Primer piso</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Columna de imagen -->
+        <div class="md:col-span-5 relative overflow-hidden">
+
+          <!-- Badge de precio -->
+          <div class="absolute top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-full 
+  font-bold text-lg z-10 shadow-2xl discount-badge">
+            ENTRADA GRATIS
+          </div>
+
+          <img
+            src="https://images.unsplash.com/photo-1611956425642-d5a8169abd63?q=80&w=1511&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Show de Stand Up Comedy en el Paseo del Sol"
+            class="w-full h-64 md:h-full object-cover transition-transform duration-700 hover:scale-105" loading="lazy"
+            width="600" height="400" itemprop="image">
+
+          <!-- Overlay gradiente para mejor legibilidad del texto sobre imagen -->
+          <div class="absolute inset-0 bg-gradient-to-l from-amber-500/20 to-orange-600/10 md:hidden"></div>
+        </div>
+      </div>
+    </section>
 
     <!-- CARD TECH WORLD OPTIMIZADA -->
     <article id="techworld" class="snap-section flex items-center justify-center p-4 store-card"
