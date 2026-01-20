@@ -6,7 +6,7 @@
 
 .snap-container {
   scroll-snap-type: y proximity;
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 100vh;
 }
 
